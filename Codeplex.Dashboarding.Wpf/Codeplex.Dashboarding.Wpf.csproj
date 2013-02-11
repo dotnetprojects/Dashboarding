@@ -58,6 +58,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Codeplex.Dashboarding\AssemblyVersion.cs">
@@ -202,6 +203,9 @@
     <Compile Include="..\Codeplex.Dashboarding\Scale.xaml.cs">
       <Link>Scale.xaml.cs</Link>
       <DependentUpon>Scale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Codeplex.Dashboarding\SevenSegmentLED.xaml.cs">
+      <Link>SevenSegmentLED.xaml.cs</Link>
     </Compile>
     <Compile Include="..\Codeplex.Dashboarding\SixteenSegmentLED.xaml.cs">
       <Link>SixteenSegmentLED.xaml.cs</Link>
@@ -418,6 +422,11 @@
       <Link>Scale.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Codeplex.Dashboarding\SevenSegmentLED.xaml">
+      <Link>SevenSegmentLED.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

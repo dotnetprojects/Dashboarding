@@ -159,6 +159,9 @@
     <Compile Include="Scale.xaml.cs">
       <DependentUpon>Scale.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SevenSegmentLED.xaml.cs">
+      <DependentUpon>SevenSegmentLED.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SixteenSegmentLED.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>SixteenSegmentLED.xaml</DependentUpon>
@@ -324,6 +327,10 @@
     <Page Include="Scale.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SevenSegmentLED.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
