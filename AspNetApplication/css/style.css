@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+background: #000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+line-height: 17px;
+color: #eee;
+}
+
+
+
+a {
+text-decoration: none;
+color: #FFE788;
+}
+a:hover {
+text-decoration: none;
+color: #eee;
+}
+
+#wrap {
+margin: 20px auto;
+width: 1000px;
+}
+
+#header {
+height: 60px;
+line-height: 60px;
+}
+#header h1 {
+color : #fff; 
+font-size: 50px;
+letter-spacing: -5px;
+}
+
+#left {
+margin-top: 10px;
+float: left;
+width: 160px;
+font-size: 13px;
+padding: 10px;
+background: #2F2C2C;
+}
+#left ul {
+list-style-type: square;
+padding: 5px 0 10px 30px;
+color: #FFE788;
+}
+
+#left h2 {
+font-size: 20px;
+font-weight: 100;
+letter-spacing: -2px;
+padding: 5px 0 5px 0;
+}
+
+.homeLink
+{
+	background-position: #808080;
+	font-size: 20px;
+	font-weight: 100;
+	letter-spacing: -2px;
+	padding: 5px 0 5px 0 margin-bottom: 10px;
+
+	
+}
+
+
+#right {
+margin-top: 10px;
+float: right;
+width: 780px;
+background: #2F2C2C;
+text-align: justify;
+padding: 10px;
+}
+#right h2
+{
+	font-weight: 100;
+	letter-spacing: -2px;
+	font-size: 28px;
+	padding: 25px 0 10px 0;
+}
+
+#right h3
+{
+	font-weight: 100;
+	letter-spacing: -1px;
+	font-size: 18px;
+	padding: 25px 0 10px 0;
+}
+
+
+#right h2 a {
+}
+#right h2 a:hover {
+color: #fff;
+text-decoration: none;
+}
+
+#right ul {
+list-style-type: square;
+padding: 5px 0 10px 60px;
+color: #888888;
+}
+
+#right p {
+padding: 5px 0 10px 30px;
+}
+
+
+
+#footer {
+background: #0D0D0D;
+font-size: 11px;
+text-align: center;
+margin-top: 30px;
+padding: 5px 0;
+}
+

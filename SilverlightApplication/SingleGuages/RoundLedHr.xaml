@@ -1,0 +1,183 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.RoundLedHr"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
+
+    Width="400" Height="16">
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Orientation="Horizontal">
+            <db:RoundLed x:Name="_l5"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#FFFFFF" LowColor="#FFFFFF" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l0"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#00FF00" LowColor="#00FF00" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l1"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#FFFF00" LowColor="#FFFF00" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l2"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#FF0000" LowColor="#FF0000" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l3"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#0000FF" LowColor="#0000FF" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l4"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#00FFFF" LowColor="#00FFFF" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+
+            <db:RoundLed x:Name="_l6"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#33FF77" LowColor="#33FF77" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l7"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#BB5500" LowColor="#BB5500" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l8"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#0055bb" LowColor="#0055bb" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+
+
+
+
+            <db:RoundLed x:Name="_l9"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#FFFFFF" LowColor="#FFFFFF" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l10"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#00FF00" LowColor="#00FF00" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l11"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#FFFF00" LowColor="#FFFF00" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l12"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#FF0000" LowColor="#FF0000" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l13"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#0000FF" LowColor="#0000FF" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l14"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#00FFFF" LowColor="#00FFFF" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+
+            <db:RoundLed x:Name="_l16"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#33FF77" LowColor="#33FF77" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l17"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#BB5500" LowColor="#BB5500" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+            <db:RoundLed x:Name="_l18"  Value="100" Grid.Column="0" Width="16" Height="16" >
+                <db:BinaryDashboard.TrueColor>
+                    <db:ColorPoint HiColor="#0055bb" LowColor="#0055bb" Value="9" />
+                </db:BinaryDashboard.TrueColor>
+                <db:BinaryDashboard.FalseColor>
+                    <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+                </db:BinaryDashboard.FalseColor>
+            </db:RoundLed>
+
+
+
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>

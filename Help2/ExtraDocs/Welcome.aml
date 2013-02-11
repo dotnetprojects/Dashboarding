@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="c9e5e3dd-0823-4375-83bf-cb5d73bf2114" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+    <introduction>
+     
+      <autoOutline />
+
+      <para>
+        Welcome to the Silverlight and WPF Dashboard control library. The goal of the project
+        is to provide dashboard gauges, dials and indicators in a platform independant manner.
+      </para>
+      <para>Currently there are 21 controls in the library, these are</para>
+      <list class="bullet">
+        <listItem>DecadeVuMeter</listItem>
+        <listItem>Dial180North, Dial180South, Dial180East, Dial180West Dial360, Knob360, Dial90 (NE, NW, SE, SW)</listItem>
+        <listItem>DiamondSlider, FiveStarRanking, ProgressBar </listItem>
+        <listItem>MatrixLedMarquee</listItem>
+        <listItem>Odometer</listItem>
+        <listItem>PerformanceMonitor</listItem>
+        <listItem>PlainThermomter, WallThermometer</listItem>
+        <listItem>SixteenSegmentLED</listItem>
+        <listItem>RoundLed, TickCross</listItem>
+      </list>
+
+      <mediaLink>
+        <image placement="center"  xlink:href="4003e1a8-df3b-4833-994f-e4f8ef5957c9"/>
+      </mediaLink>
+
+      <para>
+        One of the fundamental goals of the library has always been simplicity. While
+        there are many options to configure the dials and gauges; out of the box, a simple WPF or Silverlight
+        user control that displays it's value as a gauge and that is data bound to an object is as simple as:
+      </para>
+
+      <code language="xml" title="It can be this easy.." numberLines="true" >
+        <![CDATA[              
+<UserControl x:Class="SilverlightApplication.SingleGuages.Dial180_1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding">
+  <Grid x:Name="LayoutRoot" >
+    <db:Dial180North Value="{Binding Path=TheValue}"/>
+  </Grid>
+</UserControl>]]>
+      </code>
+
+      <para>
+        Most of what you see above is the standard gubbins that comes from creating a <codeInline> UserControl</codeInline>. The two
+        additional lines are: Line 4 declares the XML namespace aliased <codeInline>db</codeInline>, this
+        is a reference to the   assembly. The other line we added was line 6 which declares the instance of a
+        <codeInline>Dial180North </codeInline> control. Not at all difficult (just remember to add a reference to the <codeInline>Codeplex.Dashboarding.dll</codeInline> assembly in your project..
+      </para>
+
+      <alert class="note">
+        <para>
+          From here on in the examples will omitt the namespace declaration and surrounding
+          UserControl etc and just show the control XAML
+        </para>
+      </alert>
+
+
+    </introduction>
+   
+    
+    <relatedTopics>
+      <!-- Bi direction -->    
+      <link xlink:href="43e1b7e4-461b-4d6a-9d5d-14962ea583f7" />
+      
+      <!-- Dials -->
+      <link xlink:href="44a3aa0a-afed-4c84-8b22-48e87ef8fae7" />
+      
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

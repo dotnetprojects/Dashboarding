@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Demos.Common.Demonstrators.ColorRangeExperimenter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Demos.Common.Demonstrators"
+             xmlns:cp="clr-namespace:Demos.Common.Util"
+Height="200" Width="220">
+    <UserControl.Resources>
+        <local:ConvertColorToBrush x:Key="_convertColorToBrush" />
+        <local:VisibilityToBooleanConverter x:Key="_convertBoolToVisibility" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Rectangle Grid.RowSpan="2" Fill="Black" RadiusX="10" RadiusY="10"/>
+        <TextBlock   Margin="5,0,5,0" Grid.Row="0" Text="Color range"   Foreground="AntiqueWhite" x:Name="_rangeName" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextAlignment="Center"  />
+        <Button Width="16" Height="20" Margin="0,0,5,0" Content="+" Grid.Row="0" HorizontalAlignment="Right" Click="Button_Click" />
+        <ListBox  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Background="Transparent" x:Name="_lister">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="24">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="24"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="24"/>
+                            <ColumnDefinition Width="16"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="24" />
+                        </Grid.RowDefinitions>
+                        <TextBox Background="Transparent" Foreground="AliceBlue" Text="{Binding Path=Value, Mode=TwoWay}" />
+
+                        <Button Grid.Column="1" HorizontalAlignment="Left" x:Name="piclLowColor" Click="piclLowColor_Click">
+                            <Rectangle Fill="{Binding Path=LowColor, Mode=TwoWay, Converter={StaticResource _convertColorToBrush} }" Width="16" Height="16" Stroke="Black"/>
+                        </Button>
+                        <Button Grid.Column="3" HorizontalAlignment="Left"  x:Name="PickHighColor" Click="PickHighColor_Click">
+                            <Rectangle Fill="{Binding Path=HiColor, Mode=TwoWay, Converter={StaticResource _convertColorToBrush} }" Width="16" Height="16" Stroke="Black"/>
+                        </Button>
+
+                        <Rectangle Margin="4,4,4,4" Grid.Column="2">
+                            <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.742,0.946" StartPoint="0.258,0.054">
+                                <GradientStop  Color="{Binding LowColor}" Offset="0"/>
+                                <GradientStop  Color="{Binding HiColor}" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+
+                        </Rectangle>
+
+                        <Button x:Name="_deletePoint" Click="_deletePoint_Click" Content="-" Grid.Column="4"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+            
+        </ListBox>
+
+
+       
+    </Grid>
+</UserControl>

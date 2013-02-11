@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="SilverlightApplication.Prog2"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+ xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+    Width="110" Height="200">
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel Orientation="Vertical">
+        <db:ProgressBar OutlineColor="Gray" Value="70" HorizontalAlignment="Left"  >
+            <db:ProgressBar.InProgressColor >
+                <db:ColorPoint HiColor="#440044" LowColor="#FF00FF"  />
+            </db:ProgressBar.InProgressColor>
+            <db:ProgressBar.OutOfProgressColor >
+                <db:ColorPoint HiColor="#000000" LowColor="#330033"  />
+            </db:ProgressBar.OutOfProgressColor>
+        </db:ProgressBar>
+
+            <TextBlock Height="140"/>
+
+            <db:ProgressBar OutlineColor="Red" Value="55" HorizontalAlignment="Left" >
+            <db:ProgressBar.InProgressColor >
+                <db:ColorPoint HiColor="Yellow" LowColor="Pink"  />
+            </db:ProgressBar.InProgressColor>
+            <db:ProgressBar.OutOfProgressColor >
+                <db:ColorPoint HiColor="Blue" LowColor="Green"  />
+            </db:ProgressBar.OutOfProgressColor>
+        </db:ProgressBar>
+</StackPanel>
+    </Grid>
+</UserControl>

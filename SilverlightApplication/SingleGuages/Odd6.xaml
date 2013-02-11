@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Odd6"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+              xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"   
+   >
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="_inc3" Height="20" Width="40" Content="^" Click="_inc3_Click"/>
+                <Button x:Name="_inc2" Height="20" Width="40"  Content="^" Click="_inc2_Click"/> 
+                <Button x:Name="_inc1" Height="20" Width="40"  Content="^" Click="_inc1_Click"/> 
+            </StackPanel>
+                <db:Odometer x:Name="_od" Digits="3" MeterMode="Static" />
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="_dec3" Height="20" Width="40" Content="v" Click="_dec3_Click"/>
+                <Button x:Name="_dec2" Height="20" Width="40"  Content="v" Click="_dec2_Click"/>
+                <Button x:Name="_dec1" Height="20" Width="40"  Content="v" Click="_dec1_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

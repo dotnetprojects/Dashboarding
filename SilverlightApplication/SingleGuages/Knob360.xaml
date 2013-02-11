@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Knob360"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+              xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+   >
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <db:Knob360 x:Name="_dial0" Grid.Row="0" ValueTextColor="Yellow">
+            <db:Knob360.FaceColorRange>
+                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
+                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0000" Value="55" />
+            </db:Knob360.FaceColorRange>
+        </db:Knob360>
+
+        <db:Knob360 x:Name="_dial1" Grid.Row="1" ValueTextVisibility="Collapsed">
+            <db:Knob360.NeedleColorRange>
+                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+            </db:Knob360.NeedleColorRange>
+        </db:Knob360>
+
+
+        <db:Knob360 x:Name="_dial2" Grid.Row="2">
+            <db:Knob360.FaceColorRange>
+                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
+                <db:ColorPoint HiColor="#2A242C" LowColor="#220000" Value="55" />
+            </db:Knob360.FaceColorRange>
+            <db:Knob360.NeedleColorRange>
+                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+            </db:Knob360.NeedleColorRange>
+        </db:Knob360>
+
+    </Grid>
+
+</UserControl>

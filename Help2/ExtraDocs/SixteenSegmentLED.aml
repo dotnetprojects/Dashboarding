@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="e9d7cca6-c8bc-40ea-9485-0cd102410087" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+   
+    
+    <introduction>
+
+      <para>The SixteenSegmentLED shows a single LED digit / letter on a 16 segment style 
+      display. There are inbuilt representations of the letters A to Z (caps) and the 
+      digits 0 to 9.</para>
+
+      <para>
+        Support for support for punctuation and non-english characters can be added later.
+        within the limitations of the form.
+      </para>
+
+      <para>Unlike most of the other Dashboards in the collection this control does not 
+        have a Value property of type double, it has a DisplayCharacter property 
+        of type string (only set one character).
+      </para>
+
+      <para>Supported characters are</para>
+
+      <mediaLink>
+        <image placement="center" xlink:href="b5ef4372-993a-44d3-89f6-dc08d2836d1c"/>
+      </mediaLink>
+
+      <para>The <codeInline>SixteenSegmentLED </codeInline> control has the following properties that effect the apperance of it:</para>
+      <list class="bullet">
+        <listItem><codeInline>DisplayCharacter</codeInline></listItem>
+        <listItem><codeInline>LedOnColor</codeInline></listItem>
+        <listItem><codeInline>LedOffColor</codeInline></listItem>
+      </list>
+
+      <para>The markup for a single digit is shown below. Note: If you are packing several of these controls add a margin 
+      to seperate the characters.</para>
+
+      <code language="xml" title="plain thermometer" numberLines="true" >
+        <![CDATA[              
+        <db:SixteenSegmentLED DisplayCharacter="8"     
+            LedOnColor= "#FF614B8D" 
+            LedOffColor="#33614b8d" />            
+  ]]>
+      </code>
+      
+      <mediaLink>
+        <image placement="center" xlink:href="b5ef4372-993a-ffd3-89f6-dc08d2836d1c"/>
+      </mediaLink>
+
+      <alert class="tip">
+        <para>The <codeInline>LedOffColor</codeInline> is set to be a transparent version
+        of the <codeInline>LedOnColor</codeInline> color in the example above which gives good results.
+      </para>
+      </alert>
+
+    </introduction>
+  
+
+    <relatedTopics>
+     
+      
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

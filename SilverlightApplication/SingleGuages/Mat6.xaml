@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Mat6"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+    Width="340" Height="360">
+    <Grid x:Name="LayoutRoot" >
+
+        <StackPanel Orientation="Vertical">
+            
+<db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text="abcdefghijklm"/>
+            <Rectangle Height="10" />
+<db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text="nopqrstuvwxyz"/>
+            <Rectangle Height="10" />
+            <db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text="ABCDEFGHIJKLM"/>
+            <Rectangle Height="10" />
+            <db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text="NOPQRSTUVWXYZ"/>
+
+            <Rectangle Height="10" />
+            <db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text="!&quot;#$%&amp;&quot;()*+ -"/>
+
+            <Rectangle Height="10" />
+            <db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text="./0123456789:"/>
+
+<Rectangle Height="10" />
+            <db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text=";&lt;=&gt;?@[]£^_`{"/>
+            <Rectangle Height="10" />
+            <db:MatrixLedMarquee Panels="13" Mode="Motionless" TextAlignment="Left"
+Text="|}"/>
+        </StackPanel>
+    </Grid>
+
+
+
+</UserControl>
+

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="43e1b7e4-461b-4d6a-9d5d-14962ea583f7" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+    <introduction>
+      
+
+      <para>In modern dashboards it is increasingly becomming the norm for
+      controls not just to show changes in data, but modify the values of that 
+      data.</para>
+      <para>In the Silverlight and WPF Dashboard library we support the concept of
+      Bidirection. A bidirectional control in addition to rendering the value
+      also renders grab handles that can be moved to set the value. In iTunes
+      you see this type of behaviour when you rank you tracks using the stars.</para>
+    </introduction>
+
+    
+    
+    
+    <section address="Section1">
+      <title>Bidirection in the Codeplex.Dashboarding library</title>
+      <content>
+
+        <para>
+          All Bidriectional gauges derive from the base class <codeInline>BidirectionalDashboard</codeInline>
+          which defines the all important property <codeInline>IsBidirectional</codeInline> which when set to
+          true enables bidirectional operation. 
+        </para>
+        <para>The following XAML fragment creates a bidirectional <codeInline>DiamondSlider</codeInline>
+      </para>
+
+        <code language="xml" title="Setting the minimum and maximum" numberLines="true" >
+          <![CDATA[              
+  <db:DiamondSlider Value="50" IsBidirectional="True" />
+  ]]>
+        </code>
+        <para>When a control is operating in a bidirectional manner it is rendered with a grab handle
+        as a visual indicator that it takes input. Thye exceptions to this rule are the sliders and knobs
+        which only show the indicator when the mouse is over the grab region (So much for consistency eh!)</para>
+  
+
+      <para> Below is a graphic showing all of the bidirectional controls
+      in all their &apos;I take input&apos; - glory.</para>
+      
+      
+      <mediaLink>
+        <image  placement="center" xlink:href="f724e048-f64e-4533-9944-5392a6c7644f"/>
+      </mediaLink>
+    </content>
+    </section>
+
+    <relatedTopics>
+
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial360</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial180North</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90NorthEast</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90NorthWest</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90SouthEast</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90SouthWest</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Knob360</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.DiamondSlider</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.ProgressBar</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.FiveStarRanking</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.PlainThermometer</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.WallThermometer</codeEntityReference>
+
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

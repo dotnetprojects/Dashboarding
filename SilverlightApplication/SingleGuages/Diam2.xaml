@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Diam2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+ xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+    Width="130" Height="75">
+    
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel>
+<db:DiamondSlider Value="0" 
+    DiamondColor="AntiqueWhite"
+    LeftGradient="AliceBlue"
+    MidGradient="Beige"
+    RightGradient="CornflowerBlue"
+/>
+
+            <db:DiamondSlider Value="50" 
+    DiamondColor="AntiqueWhite"
+    LeftGradient="AliceBlue"
+    MidGradient="Beige"
+    RightGradient="CornflowerBlue"
+/>
+
+            <db:DiamondSlider Value="100" 
+    DiamondColor="AntiqueWhite"
+    LeftGradient="AliceBlue"
+    MidGradient="Beige"
+    RightGradient="CornflowerBlue"
+/>
+
+
+
+        </StackPanel>            
+            
+    </Grid>
+</UserControl>

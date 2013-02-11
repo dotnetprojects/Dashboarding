@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="1056afbf-bc62-4a80-ba11-2bb99a5462d1" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+    
+      <para>Sliders are linear representations of values. Currently there are five gauges
+      that fall into this category:
+      </para>
+      <list class="bullet">
+        <listItem>Five star ranking</listItem>
+        <listItem>Progress bar</listItem>
+        <listItem>Diamond Slider</listItem>
+        <listItem>Thermometer</listItem>
+        <listItem>Wall thermometer</listItem>
+      </list>
+      <para>Each of these controls have slightly different configuration options and 
+      are described in turn.
+      </para>
+    </introduction>
+    <!-- Add one or more top-level section elements.  These are collapsible.
+         If using <autoOutline />, add an address attribute to identify it
+         and specify a title so that it can be jumped to with a hyperlink. -->
+    <section address="Section1">
+      <title>Five star ranking</title>
+      <content>
+        <para>
+          The <codeInline>FiveStarRanking</codeInline> is a representation of a rank or score,
+          it looks like:
+        </para>
+
+        <mediaLink>
+          <image placement="center" xlink:href="67b36cad-1c2a-4488-a9e6-fa8e96e4c899"/>
+        </mediaLink>
+
+        <para>These things are as common as muck these days. Every site has one,
+        now you can too :-)</para>
+
+        <para>The <codeInline>FiveStarRanking</codeInline> control has two visual properties that the user can set</para>
+
+        <list class="bullet">
+          <listItem>the <codeInline>InRankColor </codeInline></listItem>
+          <listItem>the <codeInline>OutRankColor</codeInline></listItem>
+        </list>
+
+
+        <para>The InRankColor is the color of a star (or part of a star) that is included in the rank or score 
+        (the gold color in the example above). The OutRankColor is the color of stars 
+        that are not included in the rank (gray in the example above).
+        Both the InRankColor and the OutRankColor properties are ColorPoint take values, describing the start and end colors of a gradient fill. Here is an example
+        </para>
+
+        <code language="xml" title="Coloring a five star ranking" numberLines="true" >
+          <![CDATA[              
+         <StackPanel>
+		      <db:FiveStarRanking HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Value="50">
+                <db:FiveStarRanking.InRankColor >
+                    <db:ColorPoint HiColor="#999999" LowColor="#FFFFFF"  />
+                </db:FiveStarRanking.InRankColor>
+                <db:FiveStarRanking.OutRankColor >
+                    <db:ColorPoint HiColor="#000000" LowColor="#222222"  />
+                </db:FiveStarRanking.OutRankColor>
+            </db:FiveStarRanking>
+                <db:FiveStarRanking HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Value="50">
+                    <db:FiveStarRanking.InRankColor >
+                        <db:ColorPoint HiColor="#440044" LowColor="#FF00FF"  />
+                    </db:FiveStarRanking.InRankColor>
+                    <db:FiveStarRanking.OutRankColor >
+                        <db:ColorPoint HiColor="#000000" LowColor="#330033"  />
+                    </db:FiveStarRanking.OutRankColor>
+                </db:FiveStarRanking>
+        </StackPanel>
+  ]]>
+        </code>
+
+        <para>Which is visualized as:</para>
+
+
+        <mediaLink>
+          <image placement="center" xlink:href="67b36cad-1c2a-34568-a9e6-fa8e96e4c899"/>
+        </mediaLink>
+        
+      </content>
+    </section>
+
+    <section address="Section2">
+      <title>Progress bar</title>
+      <content>
+        <para>
+          Our next slider is the <codeInline>ProgressBar</codeInline> is a representation of the percent complete
+          for a task or action. There is a progress bar in the <codeInline>System.Windows.Controls</codeInline> namespace
+          these days, but when this library was started there wasn't (belive it or not).
+        </para>
+
+        <mediaLink>
+          <image placement="center" xlink:href="67d55cad-1c2a-4488-a9e6-fa8346e4c899"/>
+        </mediaLink>
+
+        <para>
+          The <codeInline>ProgressBar</codeInline> control has three visual properties that the user can set
+        </para>
+
+        <list class="bullet">
+          <listItem>
+            the <codeInline>OutlineColor </codeInline>
+          </listItem>
+          <listItem>
+            the <codeInline>InProgressColor </codeInline>
+          </listItem>
+          <listItem>
+            the <codeInline>OutOfProgressColor</codeInline>
+          </listItem>
+        </list>
+
+
+        <para>
+          Progress that is complete is displayed in the InProgressColor,
+          parts of the gauge representing territory yet to be covered is shown in the OutOfProgressColor.
+          The Outline color is the border around the boxes that make up the gauge.
+        </para>
+
+        <para>In the above example the InProgressColor is cyan, 
+        the OutOfProgressColor is light gray and the OutlineColor is transparent.</para>
+
+        <para>The actual values are not colors but ColorPoints which allow 
+        us to specify gradients for the color. For a description of color points see the section
+      on customizing Dials.</para>
+
+        <para>
+          Here are two example gauges showing the full range of possibilities, the second is
+          deliberately garish to highlight what color effects what visuals.
+        </para>
+
+
+        <code language="xml" title="Coloring a progress bar" numberLines="true" >
+          <![CDATA[              
+        <StackPanel Orientation="Vertical">
+        <db:ProgressBar OutlineColor="Gray" Value="70" >
+            <db:ProgressBar.InProgressColor >
+                <db:ColorPoint HiColor="#440044" LowColor="#FF00FF"  />
+            </db:ProgressBar.InProgressColor>
+            <db:ProgressBar.OutOfProgressColor >
+                <db:ColorPoint HiColor="#000000" LowColor="#330033"  />
+            </db:ProgressBar.OutOfProgressColor>
+        </db:ProgressBar>
+
+       <db:ProgressBar OutlineColor="Red" Value="55"  >
+            <db:ProgressBar.InProgressColor >
+                <db:ColorPoint HiColor="Yellow" LowColor="Pink"  />
+            </db:ProgressBar.InProgressColor>
+            <db:ProgressBar.OutOfProgressColor >
+                <db:ColorPoint HiColor="Blue" LowColor="Green"  />
+            </db:ProgressBar.OutOfProgressColor>
+        </db:ProgressBar>
+      </StackPanel>
+  ]]>
+        </code>
+
+        <para>Which is visualized as:</para>
+
+
+        <mediaLink>
+          <image placement="center" xlink:href="67b36cad-1c2a-fedee-a9e6-fa8e96e4c899"/>
+        </mediaLink>
+      </content>
+    </section>
+
+    <section address="Section3">
+      <title>Diamond Slider</title>
+      <content>
+        <para>The diamond slider, another linear indicator, has the following default appearance</para>
+
+        <mediaLink>
+          <image placement="center" xlink:href="67d55cad-1c2a-4488-a9e6-fa2566e4c899"/>
+        </mediaLink>
+
+        <para>
+          The <codeInline>DiamondSlider</codeInline> control has four visual properties that can be used to customize the
+          appearance of the control:
+        </para>
+
+        <list class="bullet">
+          <listItem>
+            the <codeInline>DiamondColor </codeInline>
+          </listItem>
+          <listItem>
+            the <codeInline>LeftGradient </codeInline>
+          </listItem>
+          <listItem>
+            the <codeInline>MidGradient</codeInline>
+          </listItem>
+          <listItem>
+            the <codeInline>RightGradient</codeInline>
+          </listItem>
+        </list>
+
+        <para>The above image shows the default values in play, the left gradient is green, the 
+        mid yellow and the right red. The diamond color is slate blue.</para>
+
+        <para>You can style the slider quite easily, here is an example, the colors are based on a freezer thermometer
+        I have at home</para>
+
+        <code language="xml" title="Coloring a diamond slider" numberLines="true" >
+          <![CDATA[              
+  <db:DiamondSlider Value="50" 
+    DiamondColor="AntiqueWhite"
+    LeftGradient="AliceBlue"
+    MidGradient="Beige"
+    RightGradient="CornflowerBlue"
+/>
+  ]]>
+        </code>
+        
+        <mediaLink>
+          <image placement="center" xlink:href="67d55cad-1c2a-4488-a9e6-fa2566e4c496"/>
+        </mediaLink>
+
+
+      </content>
+    </section>
+
+    <section address="Section4">
+      <title>Plain and wall thermometers</title>
+      <content>
+        <para>These two thermometers are our last slider gauges (for now). Like the dials in the collection the thermometers have 
+        the capability to vary their color according to the value. In the case of the thermometers it is the color
+      of the liquid that varies.</para>
+        <para>There are several properties that can be altered to change the appearance of the thermometers:</para>
+        <list class="bullet">
+          <listItem>ValueTextVisibility</listItem>
+          <listItem>ValueTextColor</listItem>
+          <listItem>ValueTextFormat</listItem>
+          <listItem>MercuryColorRange</listItem>
+        </list>
+
+        <para>In addition to the above properties the Wall thermometer has the following: </para>
+        <list class="bullet">
+          <listItem>FaceTextVisibility</listItem>
+          <listItem>FaceTextColor</listItem>
+          <listItem>FaceTextFormat</listItem>
+        </list>
+
+        <para>Out of the box the thermometers look like</para>
+
+        <mediaLink>
+          <image placement="center" xlink:href="aad1e6a3-949d-4967-9a29-37053f7c462c"/>
+        </mediaLink>
+
+        <para>With a bit of coloring </para>
+
+        <code language="xml" title="plain thermometer" numberLines="true" >
+          <![CDATA[              
+         <db:PlainThermometer x:Name="_ther2" ValueTextColor="Aquamarine" Value="22">
+                <db:PlainThermometer.MercuryColorRange>
+                    <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                    <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                    <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+                </db:PlainThermometer.MercuryColorRange>
+          </db:PlainThermometer>
+  ]]>
+        </code>
+        
+        <para>The plain thermometer becomes</para>
+
+        <mediaLink>
+          <image placement="center" xlink:href="b5ef4371-993a-44d3-89f6-dc08d2836d1c"/>
+        </mediaLink>
+
+      
+        
+      </content>
+      
+      
+      
+    </section>
+
+
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

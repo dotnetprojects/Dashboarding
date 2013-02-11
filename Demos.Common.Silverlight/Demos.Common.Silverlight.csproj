@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{703E22CA-78BF-4394-9E36-64E5F26AE5B5}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demos.Common</RootNamespace>
+    <AssemblyName>Demos.Common</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Demonstrators\AllControlsDemonstrator.xaml.cs">
+      <DependentUpon>AllControlsDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\BooleanDemonstrator.xaml.cs">
+      <DependentUpon>BooleanDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\BoundData.cs" />
+    <Compile Include="Demonstrators\BoundData.xaml.cs">
+      <DependentUpon>BoundData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\ColorRangeExperimenter.xaml.cs">
+      <DependentUpon>ColorRangeExperimenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\ConvertColorToBrush.cs" />
+    <Compile Include="Demonstrators\Dial180Demonstrator.xaml.cs">
+      <DependentUpon>Dial180Demonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\Dial360Demonstrator.xaml.cs">
+      <DependentUpon>Dial360Demonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\Dial90Demonstrator.xaml.cs">
+      <DependentUpon>Dial90Demonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\Experimenter.xaml.cs">
+      <DependentUpon>Experimenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\IDemonstrateDials.cs" />
+    <Compile Include="Demonstrators\Knob360Demonstrator.xaml.cs">
+      <DependentUpon>Knob360Demonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\LedMarqueeDemonstrator.xaml.cs">
+      <DependentUpon>LedMarqueeDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\MatrixLedCharacterDemonstrator.xaml.cs">
+      <DependentUpon>MatrixLedCharacterDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\OdometerDemonstrator.xaml.cs">
+      <DependentUpon>OdometerDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\PerformanceMonitorDemonstrator.xaml.cs">
+      <DependentUpon>PerformanceMonitorDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\PlainThermometerDemonstrator.xaml.cs">
+      <DependentUpon>PlainThermometerDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\ProgressbarDemonstrator.xaml.cs">
+      <DependentUpon>ProgressbarDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\VduMeterDemonstrator.xaml.cs">
+      <DependentUpon>VduMeterDemonstrator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demonstrators\VisibilityToBooleanConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ColorPicker.xaml.cs">
+      <DependentUpon>ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ColorSelectedEventargs.cs" />
+    <Compile Include="Util\DemonstratorDiscovery.cs" />
+    <Compile Include="Util\PopupColorPicker.xaml.cs">
+      <DependentUpon>PopupColorPicker.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Demonstrators\AllControlsDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\BooleanDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\BoundData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\ColorRangeExperimenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\Dial180Demonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\Dial360Demonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\Dial90Demonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\Experimenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\Knob360Demonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\LedMarqueeDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\MatrixLedCharacterDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\OdometerDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\PerformanceMonitorDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\PlainThermometerDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\ProgressbarDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demonstrators\VduMeterDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Util\ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Util\PopupColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Codeplex.Dashboarding\Codeplex.Dashboarding.csproj">
+      <Project>{4AC50D91-3409-41EC-B09B-4B15F82F731A}</Project>
+      <Name>Codeplex.Dashboarding</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

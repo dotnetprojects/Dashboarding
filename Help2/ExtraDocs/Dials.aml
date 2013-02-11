@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="44a3aa0a-afed-4c84-8b22-48e87ef8fae7" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+   
+    <introduction>
+      <autoOutline />
+   
+      <para>
+        We have quite a few dials in the collection, currently ten in total. All of the dials
+        share common properties and behave in the same manner.
+      </para>
+      
+      <para>The currently supported dials are:</para>
+
+      <mediaLink>
+        <image placement="center" xlink:href="644e1677-0b2c-4cab-a886-01f6f4432db5"/>
+      </mediaLink>
+
+    </introduction>
+
+    <section address="Section1">
+      <title>Common settings</title>
+      <content>
+
+        <para>
+          There are common settings for most of the gauges and progress bars. These settings are detailed
+          here to prevent the need for duplication.
+        </para>
+
+        <section address="Section2">
+          <title>Minimum and maximum value</title>
+          <content>
+
+            <para>
+              The default minimum and maximum value range of a dial is 0 &lt;= n &lt;= 100, which is
+              fine for some cases not so for others. The base Dashboard class supports the
+              properties Minimum and Maximum which allow you to specify the range of acceptable values.
+            </para>
+
+            <code language="xml" title="Setting the minimum and maximum" numberLines="true" >
+              <![CDATA[              
+  <db:Dial180North Minimum="-10" Maximum="10" Value="-7" />
+  ]]>
+            </code>
+
+            <mediaLink>
+              <image placement="center" xlink:href="f3f162a9-f709-4651-b8e8-37a68d18d820"/>
+            </mediaLink>
+
+            <para>
+              The minimum and maximum values can be positive, neagtive or a mix of the two.
+              If the Maximum and minimum are swapped the underlying classes detect this
+              and silently fix the issue.
+            </para>
+
+          </content>
+        </section>
+
+        <section address="Section3">
+          <title>Face and value text format</title>
+          <content>
+
+            <para>
+              If you change the minimum and maximum values you will notice that the text on the
+              face of the dials is updated to reflect the new values. However space is limited,
+              and each piece of text can only display ~ 4 characters. In addition to limited space
+              the automatic calculation of the interim values can throw up some surprises
+              with fractional values being displayed.
+            </para>
+            <para>
+              The properties <codeInline>FaceTextFormat</codeInline> and <codeInline>ValueTextFormat</codeInline> were introduced to give you a finer
+              degree of control over how the text is rendered. They allow you to specify the
+              <codeInline>String.Format()</codeInline>, format string used to render the text.
+            </para>
+
+            <para>
+              If the range of you dial is -1 ... +1 and you want to display the face text using
+              one digit and two decimal points you would specify the format string <codeInline>"{0:0.00}"</codeInline>
+              (the zero'th format parameter {0} must be used)
+            </para>
+
+            <code language="xml" title="Setting the face and value text format" numberLines="true" >
+              <![CDATA[              
+        <db:Dial360 Value="-0.123" Minimum="-1" Maximum="1" 
+          FaceTextFormat="{}{0:0.0}" 
+          ValueTextFormat="{}{0:0.000}"/>
+]]>
+            </code>
+
+            <para>
+              But <legacyItalic>hold on</legacyItalic> I hear you cry!, what's that on lines 7 &amp; 8?
+            </para>
+
+            <alert class="tip">
+              <para>
+                When declaring the format
+                statement in XAML you have to prefix it with <codeInline> {}</codeInline>  to escape the following curly brackets or
+                silverlight will attempt interpret the string as a binding statement,
+                and the render will fail.
+                <para>
+                  If you are setting the format string in code the prefixed braces are not needed,
+                  and if present will cause the format to fail. It's a classic darned if you do, darned if you don't
+                  scenario!
+                </para>
+              </para>
+            </alert>
+            <para>
+              If all is well you should get the following dial. Notice there is quite a bit more
+              space to show the value text.
+            </para>
+
+            <mediaLink>
+              <image placement="center" xlink:href="31d6d8e4-a22b-4a8e-b89e-18e4245dea09"/>
+            </mediaLink>
+
+          </content>
+        </section>
+
+        <section address="Section4">
+          <title>Removing text from the gauges</title>
+          <content>
+            <para>
+              You don't have to display either the face or value text if you don't want to.
+              If you values are in ranges that don't lend them selves to wide text representations,
+              the <codeInline>FaceTextVisibility</codeInline> and <codeInline>ValueTextVisibility</codeInline> properties are for you:
+            </para>
+
+            <code language="xml" title="Setting the face and value text format" numberLines="true" >
+              <![CDATA[              
+        <db:Dial360 FaceTextVisibility="Collapsed" ValueTextVisibility="Collapsed" />
+]]>
+            </code>
+
+            <mediaLink>
+              <image placement="center" xlink:href="18796502-567c-4cc8-9198-85ebc0e92696"/>
+            </mediaLink>
+
+          </content>
+        </section>
+
+
+        <section address="Section5">
+          <title>Changing the color of the text</title>
+          <content>
+            <para>
+              You've decided you want the text, now you want to change the color;
+              the <codeInline>FaceTextColor</codeInline> and <codeInline>ValueTextColor</codeInline> properties are used for this
+            </para>
+
+            <code language="xml" title="Setting the face and value text format" numberLines="true" >
+              <![CDATA[              
+                <db:Dial360 FaceTextColor="#FF5544DD" ValueTextColor="AliceBlue"/>
+]]>
+            </code>
+
+            <mediaLink>
+              <image placement="center" xlink:href="c3422981-b9ef-4d67-8831-ba68e26c1a92"/>
+            </mediaLink>
+
+          </content>
+        </section>
+
+        <section address="Section6">
+          <title>Color ranges</title>
+          <content>
+            <para>
+              Ok, so color ranges are the most standard of properties but
+              they arose from a very concrete requirement. Dasboard gauges should
+              not only show values, but be capable of associating the value with
+              indicators that give further meaning to that value.
+            </para>
+            <para>
+              The standard way of associating meaning to a value was to
+              color the scale red for harmful values and white for acceptable
+              values
+            </para>
+
+            <mediaLink>
+              <image placement="center" xlink:href="d20c48e5-80c0-4f47-9f95-2201d668cbf8"/>
+            </mediaLink>
+
+          </content>
+        </section>
+
+        <para>
+          Color ranges grew out of the desire to vary the color of the gauge
+          dynamically according to values rather than a fixed static scale. So in our
+          world when the reactor core temperature is critical the entire dial face
+          turns red. Much more indicative!
+        </para>
+
+        <para>
+          For the standard gauges and knobs there are two color ranges that are used, these are
+          the <codeInline>FaceColorRange</codeInline> and <codeInline>NeedleColorRange</codeInline>
+          properties. Not surprisingly the former varies the face color of the dial acording to value and the latter the color of the needle.
+        </para>
+
+        <para>
+          A color range is composed of a series of color points. A color point is
+          the value from which the color takes place and the high and low colors of the blend. All values
+          less than the lowest entry are colored in that color and all values higher than the last point take the last color.
+          Supplying a single color point sets the color to a fixed value
+        </para>
+
+        <code language="xml" title="Setting the minimum and maximum" numberLines="true" >
+          <![CDATA[              
+          <db:Dial360 >
+           <db:Dial360.FaceColorRange>
+                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+            </db:Dial360.FaceColorRange>
+            <db:Dial360.NeedleColorRange>
+                <db:ColorPoint HiColor="#007700" LowColor="#000000" Value="22" />
+            </db:Dial360.NeedleColorRange>
+        </db:Dial360>]]>
+        </code>
+
+        <para>
+          The preceding xml defines a gauge where the face is green until the value exceedes 33,
+          yellow from there until the value passes 66 and finally red there after. Which looks like
+        </para>
+
+        <mediaLink>
+          <image placement="center" xlink:href="42f0c01e-ef75-45b6-a9d5-576a23a4f212"/>
+        </mediaLink>
+
+        <alert class="note">
+          <para>
+            There is only one needle color point specified which means the needle is a constant color,
+            I deliberately set the value to 33 so you can see that values below it also take the value
+          </para>
+        </alert>
+
+        <section address="SectionX">
+          <title></title>
+          <content>
+
+          </content>
+        </section>
+
+
+      </content>
+
+
+    </section>
+
+    <relatedTopics>
+
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial360</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial180North</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90NorthEast</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90NorthWest</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90SouthEast</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Dial90SouthWest</codeEntityReference>
+      <codeEntityReference>T:Codeplex.Dashboarding.Knob360</codeEntityReference>
+      
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

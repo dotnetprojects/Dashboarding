@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Dial90"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+    >
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+        </Grid.ColumnDefinitions>
+
+        
+        <db:Dial90NorthWest Grid.Column="0" Grid.Row="0" x:Name="_d1"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Dial90NorthWest" Foreground="AntiqueWhite"></TextBlock>
+
+        <db:Dial90NorthEast Grid.Column="1" Grid.Row="0" x:Name="_d2"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Dial90NorthEast" Foreground="AntiqueWhite"></TextBlock>
+
+        <db:Dial90SouthWest Grid.Column="0" Grid.Row="3" x:Name="_d3"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Dial90SouthWest" Foreground="AntiqueWhite"></TextBlock>
+
+        <db:Dial90SouthEast Grid.Column="1" Grid.Row="3" x:Name="_d4"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Dial90SouthEast" Foreground="AntiqueWhite"></TextBlock>
+
+
+    </Grid>
+</UserControl>
+

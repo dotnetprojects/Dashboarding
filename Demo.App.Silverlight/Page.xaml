@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Demo.App.Silverlight.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+     xmlns:cp="clr-namespace:Demos.Common.Util;assembly=Demos.Common"
+     xmlns:ms="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+   >
+    <Grid>
+        <ms:DockPanel Name="dockPanel1" LastChildFill="True"  >
+            <ms:DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.991,0.979" StartPoint="0.016,0.025">
+                    <GradientStop Color="#FF000000" Offset="0"/>
+                    <GradientStop Color="#FF484545" Offset="1"/>
+                </LinearGradientBrush>
+            </ms:DockPanel.Background>
+            <ListBox ms:DockPanel.Dock="Left" Width="200" x:Name="_select" DisplayMemberPath="DemoName" Background="Transparent" Foreground="BlueViolet"></ListBox>
+            <StackPanel x:Name="_contentPanel"></StackPanel>
+        </ms:DockPanel>
+
+        <cp:PopupColorPicker x:Name="_colorPicker"/>
+    </Grid>
+</UserControl>

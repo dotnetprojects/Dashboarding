@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Odd1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+              xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"   
+   >
+    <Grid x:Name="LayoutRoot" >
+        <db:Odometer Digits="5" InitialValue="0" Interval="0.22" MeterMode="AutoIncrement" />
+    </Grid>
+</UserControl>

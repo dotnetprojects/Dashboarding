@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.RoundLedCustom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
+
+
+   Width="400">
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16" />
+            <RowDefinition Height="16" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <db:RoundLed Value="0" Grid.Column="0" Width="16" Height="16" >
+            <db:BinaryDashboard.TrueColor>
+                <db:ColorPoint HiColor="#777777" LowColor="#33ff33" Value="9" />
+            </db:BinaryDashboard.TrueColor>
+            <db:BinaryDashboard.FalseColor>
+                <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+            </db:BinaryDashboard.FalseColor>
+        </db:RoundLed>
+
+
+        <db:RoundLed Value="100" Grid.Column="1"  Width="16" Height="16">
+            <db:BinaryDashboard.TrueColor>
+                <db:ColorPoint HiColor="#777777" LowColor="#33ff33" Value="9" />
+            </db:BinaryDashboard.TrueColor>
+            <db:BinaryDashboard.FalseColor>
+                <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+            </db:BinaryDashboard.FalseColor>
+        </db:RoundLed>
+
+        <TextBlock Foreground="White" Grid.Column="0" Grid.Row="1" Text="Value = 0 (IsTrue == false)" HorizontalAlignment="Center" ></TextBlock>
+        <TextBlock Foreground="White" Grid.Column="1" Grid.Row="1" Text="Value = 100 (IsTrue == true)" HorizontalAlignment="Center"></TextBlock>
+    </Grid>
+</UserControl>

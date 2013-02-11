@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="7cadc5bf-acc9-4f05-b8bc-be75117121ee" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        The <codeInline>MatrixLedMarquee</codeInline> control is a scrolling LED  display. It is modelled on the early
+        monochrome versions. As usual on the Silverlight Dashboard project the mode is fully go-retro.
+      </para>
+    </introduction>
+
+
+    <section>
+
+      <title>Matrix LED Marquee</title>
+      <content>
+
+
+
+        <para>As usual we start with a basic example to get us going. </para>
+
+        <para>
+          The marquee in code (as in real life) is constructed from multiple panels
+          that are 5 wide by seven high. in code we specify this via the Panels property,
+          the message can be specified in XAML by the Text property
+        </para>
+
+        <code language="xml" title="Just the basics" numberLines="true" >
+          <![CDATA[
+    <db:MatrixLedMarquee Panels="10" Text="Hello Silverlight."/>
+]]>
+        </code>
+
+        <mediaLink>
+          <image placement="center" xlink:href="46bfe7e8-c827-4a9b-b672-c663c7c1155a"/>
+        </mediaLink>
+        
+        
+        <para>
+          There are properties to specified the on and off colors of the LEDS
+          <codeInline>LedOnColor</codeInline> and not unsurprisingly <codeInline>LedOffColor</codeInline>
+          You can also specify the interval between steps for the anination using the
+          <codeInline>TimerDuration</codeInline> property.
+        </para>
+
+        <para>Which gives us:</para>
+
+        <code language="xml" title="Coloring in" numberLines="true" >
+          <![CDATA[
+    <db:MatrixLedMarquee 
+        TimerDuration="00:00:0.1"
+        LedOnColor="#FFFF00FF"
+        LedOffColor="#22FF00FF"
+        Panels="10" 
+        Text="Hello Silverlight."
+    />
+]]>
+        </code>
+
+
+        <mediaLink>
+          <image placement="center" xlink:href="d612082e-d742-48b4-9df4-fc764ecd4fff"/>
+        </mediaLink>
+
+      </content>
+    </section>
+
+    <section>
+
+      <title>Modes</title>
+      <content>
+        <para>
+          When the above animation completes, the marquee is empty. That's because the default mode for the
+          <codeInline>MatrixLedMarquee</codeInline> is SingleShot and we don't supply additional text.
+        </para>
+        <para>
+          The three modes that the <codeInline>MatrixLedMarquee</codeInline> supports are:
+        </para>
+        <list class="bullet">
+          <listItem>
+            <codeInline>SingleShot</codeInline>
+          </listItem>
+          <listItem>
+            <codeInline>Continuous</codeInline>
+          </listItem>
+          <listItem>
+            <codeInline>Motionless</codeInline>
+          </listItem>
+        </list>
+
+        <para>
+          <codeInline>SingleShot</codeInline>: The text is scrolled once, whe the last digit is fully rendered on the
+          panel, the <codeInline>MatrixLedMarquee</codeInline> will raise an event allowing you to set the next piece of text.
+        </para>
+
+        <para>
+          <codeInline>Continuous</codeInline>: The text is scrolled, when it comes to an end the text is started again.
+        </para>
+
+        <para>
+          <codeInline>Motionless</codeInline>: The Text is not scrolled, it is rendered in place and alligned according to
+          the TextAlign property.
+        </para>
+
+        <para>
+          For SingleShot and Continuous modes: the new text goes straight on after the
+          previous one, it is up to the caller to pad with spaces as required.
+        </para>
+
+
+
+
+        <section>
+
+          <title>SingleShot</title>
+          <content>
+
+            <para>
+              Single shot can be fire and forget, but it can also be useful for a news ticker, where after a headline has finished
+              scrolling, you retrieve the next one and start it away.
+            </para>
+
+
+            <para>The XAML for the control initializes it and sets up the event handler</para>
+
+            <code language="xml" title="Feeding the beast when it&apos;s hungry" numberLines="true" >
+              <![CDATA[
+<db:MatrixLedMarquee Panels="10" 
+    TimerDuration="00:00:0.1"
+    Mode="SingleShot" 
+    x:Name="_marq"
+    MarqueeFinished="_marq_MarqueeFinished" 
+/>
+]]>
+            </code>
+
+
+
+
+
+
+            <para>
+              Our user control that hosts the marquee initializes the first text
+              on load and then the next one after each message finishes.
+            </para>
+
+            <para>In reality the list would come from a web service</para>
+
+            <code language="c#" title="The lunch counter for the hungry beast" numberLines="true" >
+              <![CDATA[
+public partial class Mat3 : UserControl
+    {
+        /// <summary>
+        /// Our messages, we will continuously rotate through them
+        /// </summary>
+        List<string> Messages = new List<string>
+        {
+            "Message one",
+            "Message two",
+            "Message three"
+        };
+
+        /// <summary>
+        /// Constructs a Mat3
+        /// </summary>
+        public Mat3()
+        {
+            InitializeComponent();
+
+            Loaded += new RoutedEventHandler(IAmLoaded);
+        }
+
+        /// <summary>
+        /// Control is loaded set the first message
+        /// </summary>
+        void IAmLoaded(object sender, RoutedEventArgs e)
+        {
+            SetNextMessage();
+        }
+
+        /// <summary>
+        /// Marquee has finished animating, get the next message going
+        /// </summary>
+        private void _marq_MarqueeFinished(object sender, EventArgs e)
+        {
+            SetNextMessage();
+        }
+
+        int _message = 0;
+        /// <summary>
+        /// Sets the next message and puts a little place holder between em
+        /// </summary>
+        private void SetNextMessage()
+        {
+            _marq.Text = Messages[_message] + " * ";
+            _message += 1;
+            if (_message > Messages.Count -1 )
+            {
+                _message = 0;
+            }
+        }    
+    }
+]]>
+            </code>
+          </content>
+        </section>
+
+        <section>
+          <title>Continuous</title>
+          <content>
+
+            <para>
+              Continuous operation is as simple as setting the text and the mode to Continious.
+            </para>
+            
+            <code language="xml" title="Continious operation" numberLines="true" >
+              <![CDATA[
+<db:MatrixLedMarquee 
+    Panels="10"
+    TimerDuration="00:00:0.1"
+    Mode="Continuous"
+    Text="David Black "
+/>
+]]>
+            </code>
+
+            <alert class="note">
+              <para>
+                The Text property on line 5 has a space at the end to sperate the next copy from the
+                previous one. If you don't specify the extra string the next copy will run into the previous one.
+              </para>
+            </alert>
+
+
+          </content>
+
+        </section>
+
+        <section>
+
+          <title>Motionless</title>
+          <content>
+
+            <para>
+              For motonless text we set the text, the Model to motionless and !
+              nothing much else happens :-). Seen here with text left, right and center justified
+            </para>
+
+            <code language="xml" title="Justifying our existance" numberLines="true" >
+              <![CDATA[
+
+<StackPanel Orientation="Vertical">
+  <db:MatrixLedMarquee  
+      Panels="10" 
+      Mode="Motionless"
+      TextAlignment="Left"
+      Text="lft"
+  />
+
+  <db:MatrixLedMarquee  
+      Panels="10" 
+      Mode="Motionless"
+      TextAlignment="Right"
+      Text="rgt"
+  />
+
+
+  <db:MatrixLedMarquee 
+      Text="cent"  
+      Panels="10" 
+      Mode="Motionless"   
+      TextAlignment="Center"
+  />
+</StackPanel>
+]]>
+            </code>
+
+
+            <mediaLink>
+              <image placement="center" xlink:href="61744e47-eebf-48be-8081-3cf4e9ebc91f"/>
+            </mediaLink>
+
+
+          </content>
+        </section>
+
+      </content>
+    </section>
+
+    <section>
+
+      <title>Character set</title>
+      <content>
+
+        <para>
+          The current release supports the most common characters for English. Further support will be added
+          if an when requested. Please note this control is very low resolution and as such will not
+          support Japanese or Chinese characters. I would need to create a 24 by 16 matrix for that to be possible
+        </para>
+
+        <para>
+          There is a very basic font editor available on the demo site I will include instructions on how to
+          use it later if required.
+        </para>
+
+        <para>Current character support is </para>
+
+
+        <mediaLink>
+          <image placement="center" xlink:href="4bd49e98-e969-4a12-836a-420b5b943f05"/>
+        </mediaLink>
+
+
+      </content>
+    </section>
+
+    <relatedTopics>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

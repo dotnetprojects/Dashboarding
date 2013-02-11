@@ -1,0 +1,13 @@
+﻿<demo:SingleGauge x:Class="SilverlightApplication.SingleGuages.dec.AspNetDecadeVduMeter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:db="clr-namespace:SilverlightApplication.SingleGuages"
+                    xmlns:dl="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+	xmlns:cm="clr-namespace:Codeplex.Dashboarding.Common;assembly=Codeplex.Dashboarding"
+xmlns:demo="clr-namespace:SilverlightApplication.SingleGuages"
+
+  >
+    <Grid x:Name="LayoutRoot" >
+        <dl:DecadeVuMeter x:Name="_c" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="16" />
+    </Grid>
+</demo:SingleGauge>

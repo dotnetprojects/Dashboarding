@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="SilverlightApplication.Odd3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+   xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"   
+   >
+    <Grid x:Name="LayoutRoot" >
+
+        <StackPanel>
+
+            <!-- Start at 1901 and up you go two ticks per second-->
+            <!-- Because InitialValue has only one digit, we use Digits to force the width-->
+            <db:Odometer Digits="4" InitialValue="0" MeterMode="AutoIncrement" Interval="0.5"/>
+
+            <StackPanel Height="50" Background="Transparent"/>
+
+            <!-- start at 9999 an start reducing one tick every two seconds-->
+            <db:Odometer  InitialValue="9999"  MeterMode="AutoDecrement" Interval="2.0"/>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

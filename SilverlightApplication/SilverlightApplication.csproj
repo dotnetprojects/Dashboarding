@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1A474A1-9984-44C8-A7DF-4760B33B3D68}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SilverlightApplication</RootNamespace>
+    <AssemblyName>SilverlightApplication</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>SilverlightApplication.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>SilverlightApplication.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Page Include="SingleGuages\UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="SingleGuages\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Experimentor\DecadeVuMeter.xaml.cs">
+      <DependentUpon>DecadeVuMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Dial90.xaml.cs">
+      <DependentUpon>Dial90.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\FifthStep.xaml.cs">
+      <DependentUpon>FifthStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FontEditor\FontEditor.xaml.cs">
+      <DependentUpon>FontEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FontEditor\GiantLed.xaml.cs">
+      <DependentUpon>GiantLed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FontEditor\RightHandPanel.xaml.cs">
+      <DependentUpon>RightHandPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FontEditor\SingleCharacter.xaml.cs">
+      <DependentUpon>SingleCharacter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\BiDiamond1.xaml.cs">
+      <DependentUpon>BiDiamond1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\BiDiamond2.xaml.cs">
+      <DependentUpon>BiDiamond2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\BiDiamond3.xaml.cs">
+      <DependentUpon>BiDiamond3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\BiDiamond4.xaml.cs">
+      <DependentUpon>BiDiamond4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Dial180_1.xaml.cs">
+      <DependentUpon>Dial180_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Dial180_2.xaml.cs">
+      <DependentUpon>Dial180_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Diam1.xaml.cs">
+      <DependentUpon>Diam1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Diam2.xaml.cs">
+      <DependentUpon>Diam2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Knob360.xaml.cs">
+      <DependentUpon>Knob360.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Mat1.xaml.cs">
+      <DependentUpon>Mat1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Mat2.xaml.cs">
+      <DependentUpon>Mat2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Mat3.xaml.cs">
+      <DependentUpon>Mat3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Mat4.xaml.cs">
+      <DependentUpon>Mat4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Mat5.xaml.cs">
+      <DependentUpon>Mat5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Mat6.xaml.cs">
+      <DependentUpon>Mat6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\PlayArea.xaml.cs">
+      <DependentUpon>PlayArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Prog1.xaml.cs">
+      <DependentUpon>Prog1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Prog2.xaml.cs">
+      <DependentUpon>Prog2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Odd3.xaml.cs">
+      <DependentUpon>Odd3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleGuages\dec\AspNetDecadeVduMeter.xaml.cs">
+      <DependentUpon>AspNetDecadeVduMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\dec\DecadeBorderColor.xaml.cs">
+      <DependentUpon>DecadeBorderColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Dial360.xaml.cs">
+      <DependentUpon>Dial360.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\FirstStep.xaml.cs">
+      <DependentUpon>FirstStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\FiveStarBasic.xaml.cs">
+      <DependentUpon>FiveStarBasic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\FiveStarColors.xaml.cs">
+      <DependentUpon>FiveStarColors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\FourthStep.xaml.cs">
+      <DependentUpon>FourthStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Odd1.xaml.cs">
+      <DependentUpon>Odd1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Odd2.xaml.cs">
+      <DependentUpon>Odd2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Odd4.xaml.cs">
+      <DependentUpon>Odd4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Odd5.xaml.cs">
+      <DependentUpon>Odd5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Odd6.xaml.cs">
+      <DependentUpon>Odd6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\PerformanceMonitor.xaml.cs">
+      <DependentUpon>PerformanceMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\PerformanceMonitorBasic.xaml.cs">
+      <DependentUpon>PerformanceMonitorBasic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\RoundLedBase.xaml.cs">
+      <DependentUpon>RoundLedBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\RoundLedCustom.xaml.cs">
+      <DependentUpon>RoundLedCustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\RoundLedHr.xaml.cs">
+      <DependentUpon>RoundLedHr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\SecondStep.xaml.cs">
+      <DependentUpon>SecondStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\SeventhStep.xaml.cs">
+      <DependentUpon>SeventhStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\SingleGauge.cs" />
+    <Compile Include="SingleGuages\SixteenBase.xaml.cs">
+      <DependentUpon>SixteenBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\SixteenEx.xaml.cs">
+      <DependentUpon>SixteenEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\SixthStep.xaml.cs">
+      <DependentUpon>SixthStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Therm1.xaml.cs">
+      <DependentUpon>Therm1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Therm2.xaml.cs">
+      <DependentUpon>Therm2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Therm3.xaml.cs">
+      <DependentUpon>Therm3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\ThirdStep.xaml.cs">
+      <DependentUpon>ThirdStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\TickCrossBase.xaml.cs">
+      <DependentUpon>TickCrossBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\TickCrossCustom.xaml.cs">
+      <DependentUpon>TickCrossCustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\TopStrip.xaml.cs">
+      <DependentUpon>TopStrip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Wall1.xaml.cs">
+      <DependentUpon>Wall1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Wall2.xaml.cs">
+      <DependentUpon>Wall2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleGuages\Wall3.xaml.cs">
+      <DependentUpon>Wall3.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Experimentor\DecadeVuMeter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Dial90.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\FifthStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FontEditor\FontEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FontEditor\GiantLed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FontEditor\RightHandPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FontEditor\SingleCharacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\BiDiamond1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\BiDiamond2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\BiDiamond3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\BiDiamond4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Dial180_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Dial180_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Diam1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Diam2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Knob360.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Mat1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Mat2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Mat3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Mat4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Mat5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Mat6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\PlayArea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Prog1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Prog2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Odd3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\dec\AspNetDecadeVduMeter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\dec\DecadeBorderColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Dial360.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\FirstStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\FiveStarBasic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\FiveStarColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\FourthStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Odd1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Odd2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Odd4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Odd5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Odd6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\PerformanceMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\PerformanceMonitorBasic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\RoundLedBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\RoundLedCustom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\RoundLedHr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\SecondStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\SeventhStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\SixteenBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\SixteenEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\SixthStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Therm1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Therm2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Therm3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\ThirdStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\TickCrossBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\TickCrossCustom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\TopStrip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Wall1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Wall2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SingleGuages\Wall3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\booleans.png" />
+    <Resource Include="Images\dials.png" />
+    <Resource Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Codeplex.Dashboarding\Codeplex.Dashboarding.csproj">
+      <Project>{4AC50D91-3409-41EC-B09B-4B15F82F731A}</Project>
+      <Name>Codeplex.Dashboarding</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

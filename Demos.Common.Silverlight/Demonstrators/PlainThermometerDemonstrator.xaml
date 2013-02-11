@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Demos.Common.Demonstrators.PlainThermometerDemonstrator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+    xmlns:bd="clr-namespace:Demos.Common.Demonstrators" Height="Auto" Width="Auto">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="470"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle RadiusX="10" RadiusY="10" Fill="Black"/>
+        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+
+        <db:PlainThermometer  Grid.Row="1" 
+            FaceTextVisibility="{Binding Path=FaceTextVisibility}"
+            FaceTextColor="{Binding Path=FaceTextColor}"                     
+            FaceTextFormat="{Binding Path=FaceTextFormat}"                     
+                     
+            ValueTextVisibility="{Binding Path=ValueTextVisibility}"
+            ValueTextColor="{Binding Path=ValueTextColor}"                     
+            ValueTextFormat="{Binding Path=ValueTextFormat}"                     
+
+            IsBidirectional="{Binding Path=IsBidirectional}"
+            Minimum="{Binding Path=Minimum}"                     
+            Maximum="{Binding Path=Maximum}"     
+            AnimationDuration="{Binding Path=AnimationDuration}"
+            MercuryColorRange="{Binding FaceColorRange, Mode=TwoWay}"
+              
+            Value="{Binding CurrentValue, Mode=TwoWay}"
+                     >
+
+            </db:PlainThermometer>
+
+            <db:WallThermometer Margin="20,0,0,0" Grid.Row="1" 
+            FaceTextVisibility="{Binding Path=FaceTextVisibility}"
+            FaceTextColor="{Binding Path=FaceTextColor}"                     
+            FaceTextFormat="{Binding Path=FaceTextFormat}"                     
+                     
+            ValueTextVisibility="{Binding Path=ValueTextVisibility}"
+            ValueTextColor="{Binding Path=ValueTextColor}"                     
+            ValueTextFormat="{Binding Path=ValueTextFormat}"                     
+
+            IsBidirectional="{Binding Path=IsBidirectional}"
+            Minimum="{Binding Path=Minimum}"                     
+            Maximum="{Binding Path=Maximum}"     
+            AnimationDuration="{Binding Path=AnimationDuration}"
+         MercuryColorRange="{Binding FaceColorRange, Mode=TwoWay}"
+                 
+            Value="{Binding CurrentValue, Mode=TwoWay}"
+                     >
+
+            </db:WallThermometer>
+
+
+        </StackPanel>
+
+        </StackPanel>
+
+
+
+        <bd:Experimenter 
+            Margin="10,0,0,0" 
+            x:Name="_exp" 
+            Grid.Row="1" 
+            Grid.Column="1"
+             SecondColorRangeVisibility="Collapsed"    
+            FirstColorRangeTitle="MercuryColorRange"
+            />
+
+    </Grid>
+</UserControl>

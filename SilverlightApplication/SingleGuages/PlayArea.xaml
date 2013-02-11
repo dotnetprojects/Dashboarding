@@ -1,0 +1,130 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.PlayArea"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	 xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
+      
+    Width="800" Height="200" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+	<Grid x:Name="LayoutRoot" Background="Black">
+		<db:FiveStarRanking x:Name="_o1" Value="100" Height="24" Margin="0,136,144,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" d:LayoutOverrides="VerticalAlignment">
+			<ToolTipService.ToolTip>
+				<ToolTip Content="A FiveStarRanking control"/>
+			</ToolTipService.ToolTip>
+		</db:FiveStarRanking>
+		<db:ProgressBar x:Name="_prog1" Margin="0,137,30,0" d:LayoutOverrides="VerticalAlignment, Width, Height" HorizontalAlignment="Right" VerticalAlignment="Top" >
+			<ToolTipService.ToolTip>
+				<ToolTip Content="This is a ProgressBar, control"/>
+			</ToolTipService.ToolTip>
+		</db:ProgressBar>
+		<db:DiamondSlider x:Name="_slider" Height="23" Margin="0,134,253,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="125" d:LayoutOverrides="VerticalAlignment" >
+			<ToolTipService.ToolTip>
+				<ToolTip Content="This is a DiamondSlider, control"/>
+			</ToolTipService.ToolTip>
+		</db:DiamondSlider>
+		<db:Dial360 x:Name="_c1"  VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="-20,-18,0,0" d:LayoutOverrides="Width">
+			<db:Dial360.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="0.75" ScaleY="0.75"/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</db:Dial360.RenderTransform>
+			<ToolTipService.ToolTip>
+				<ToolTip Content="This is a Dial360"/>
+			</ToolTipService.ToolTip>
+			<db:Dial360.FaceColorRange>
+				<db:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
+			</db:Dial360.FaceColorRange>
+		</db:Dial360>
+
+		<db:RoundLed x:Name="_c3" HorizontalAlignment="Left" Margin="4,115,0,0" Width="26" Height="26" VerticalAlignment="Top" RenderTransformOrigin="-22.885,-9.923" d:LayoutOverrides="Height">
+			<ToolTipService.ToolTip>
+				<ToolTip Content="This is a RoundLed binary control"/>
+			</ToolTipService.ToolTip>
+		</db:RoundLed>
+		<db:TickCross x:Name="_c4" VerticalAlignment="Top"  Height="27" Margin="92,112,0,0" HorizontalAlignment="Left" Width="26" RenderTransformOrigin="-23.423,-8.333">
+			<ToolTipService.ToolTip>
+				<ToolTip Content="This is a TickCross binary Control"/>
+			</ToolTipService.ToolTip>
+		</db:TickCross>
+
+
+		<db:PerformanceMonitor x:Name="_perf" Height="142" Margin="181,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" >
+			<ToolTipService.ToolTip>
+				<ToolTip Content="This is a PerformanceMonitor, control"/>
+			</ToolTipService.ToolTip>
+
+
+
+
+		</db:PerformanceMonitor>
+
+
+		<db:PlainThermometer x:Name="_ther2" Height="135" Margin="391,11,379,0" VerticalAlignment="Top" >
+			<ToolTipService.ToolTip>
+				<ToolTip >
+					<TextBlock Width="200" TextWrapping="Wrap" Text="This is PlainThermometer control that has a color range set. The mercury is colored according to the value. Green 0..33,Yello 33..66 and red 66 to 99"/>
+				</ToolTip>
+			</ToolTipService.ToolTip>
+			<db:PlainThermometer.MercuryColorRange>
+				<db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+				<db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+				<db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+			</db:PlainThermometer.MercuryColorRange>
+		</db:PlainThermometer>
+
+		<db:WallThermometer x:Name="_wall1" Margin="339,5,0,0" VerticalAlignment="Top" Height="142" HorizontalAlignment="Left" d:LayoutOverrides="Width">
+			<ToolTipService.ToolTip>
+				<ToolTip >
+					<TextBlock Width="200" TextWrapping="Wrap" Text="This is the WallMountedThermometer"/>
+				</ToolTip>
+			</ToolTipService.ToolTip>
+			<db:WallThermometer.MercuryColorRange>
+				<db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+				<db:ColorPoint HiColor="#667700" LowColor="#AA8800" Value="33" />
+				<db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+			</db:WallThermometer.MercuryColorRange>
+		</db:WallThermometer>
+
+            
+		<db:Odometer x:Name="_odometer"  Digits="4" MeterMode="Static"  InitialValue="3141" Margin="0,70,28,0" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment, Width, Height" HorizontalAlignment="Right" >
+			<ToolTipService.ToolTip>
+				<ToolTip Content="This is an Odometer control"/>
+			</ToolTipService.ToolTip>
+		</db:Odometer>
+                
+		<StackPanel Orientation="Horizontal" Height="Auto" Margin="0,7,27,0" VerticalAlignment="Top" Width="Auto" d:LayoutOverrides="VerticalAlignment, Width" HorizontalAlignment="Right">
+
+			<ToolTipService.ToolTip>
+				<ToolTip Width="300" >
+					<TextBlock Width="300" TextWrapping="Wrap" Text="These are SixteenSegmentLED controls set up to tell the time. The size shown here is scaled down by 50%, don't cha love Silverlight!"/>
+
+				</ToolTip>
+			</ToolTipService.ToolTip>
+
+			<db:SixteenSegmentLED x:Name="_sH1" DisplayCharacter="D" Margin="5,0,0,0" />
+			<db:SixteenSegmentLED x:Name="_sH2" DisplayCharacter="a" Margin="5,0,0,0"/>
+			<db:SixteenSegmentLED x:Name="_sM1" DisplayCharacter="s" Margin="15,0,0,0"/>
+			<db:SixteenSegmentLED x:Name="_sM2" DisplayCharacter="h" Margin="5,0,0,0"/>
+			<db:SixteenSegmentLED x:Name="_sS1" DisplayCharacter="h" Margin="15,0,0,0"/>
+			<db:SixteenSegmentLED x:Name="_sS2" DisplayCharacter="h" Margin="5,0,0,0"/>
+			<db:SixteenSegmentLED x:Name="_sD1" DisplayCharacter="h" Margin="15,0,0,0"/>
+			<db:SixteenSegmentLED x:Name="_sD2" DisplayCharacter="h" Margin="5,0,0,0"/>
+		</StackPanel>
+		<StackPanel HorizontalAlignment="Left" Margin="127,4,0,0"  Orientation="Horizontal" VerticalAlignment="Top" Height="143">
+			<db:DecadeVuMeter x:Name="_c2" Width="16"  HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+			<db:DecadeVuMeter x:Name="_c12" Width="16"  HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+			<db:DecadeVuMeter x:Name="_c13" Width="16"  HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+		</StackPanel>
+		<db:Dial180North  Margin="404,41.042,0,0" HorizontalAlignment="Left" d:LayoutOverrides="VerticalAlignment" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.5,0.5" Height="113.334" x:Name="_dial180">
+			<db:Dial180North.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleX="0.75" ScaleY="0.75"/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</db:Dial180North.RenderTransform>
+		</db:Dial180North>
+	</Grid>
+</UserControl>

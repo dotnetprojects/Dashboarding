@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="ec014a7e-32e0-48df-ae22-9fbbd1deebe5" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+   
+    <introduction>
+    
+      <para>Boolean controls show boolean values. Go on, admit it, that was a total surprise, right?</para>
+    </introduction>
+
+    <section address="Section1">
+      <title>Optional section title</title>
+      <content>
+    
+        <para>Add one or more sections with content</para>
+      </content>
+    </section>
+
+    <relatedTopics>
+    
+
+     
+
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

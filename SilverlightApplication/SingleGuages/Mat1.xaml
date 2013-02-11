@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Mat1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+    Width="270" Height="50">
+    <Grid x:Name="LayoutRoot" >
+<db:MatrixLedMarquee HorizontalAlignment="Left" Margin="12,0,0,7"  VerticalAlignment="Bottom"
+    Panels="10" 
+    Text="Hello Silverlight."/>
+        
+    </Grid>
+</UserControl>

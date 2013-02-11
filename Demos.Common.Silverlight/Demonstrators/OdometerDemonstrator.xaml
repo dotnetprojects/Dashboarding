@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Demos.Common.Demonstrators.OdometerDemonstrator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+    xmlns:bd="clr-namespace:Demos.Common.Demonstrators"             
+    >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <db:Odometer InitialValue="1234" FinalValue="9999" Digits="4" MeterMode="AutoIncrement" Interval="0.5" Margin="0,0,20,0"/>
+            <db:Odometer InitialValue="1234" FinalValue="0000" Digits="4" MeterMode="AutoDecrement" Interval="0.5" />
+        </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <db:Odometer InitialValue="123467" FinalValue="999999" Digits="4" MeterMode="AutoIncrement" Interval="0.15" Margin="0,0,20,0"/>
+                <db:Odometer InitialValue="1234" FinalValue="0000" Digits="4" MeterMode="AutoDecrement" Interval="0.15" />
+            </StackPanel>
+        </StackPanel>
+
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Dial180_2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+    >
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <db:Dial180North x:Name="_dial0" Grid.Row="0" ValueTextColor="Chocolate" Value="60">
+            <db:Dial180North.FaceColorRange>
+                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
+                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0000" Value="55" />
+            </db:Dial180North.FaceColorRange>
+        </db:Dial180North>
+
+        <db:Dial180East x:Name="_dial1" Grid.Row="2" Value="1" ValueTextVisibility="Collapsed">
+            <db:Dial180.NeedleColorRange>
+                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+            </db:Dial180.NeedleColorRange>
+        </db:Dial180East>
+
+
+        <db:Dial180North x:Name="_dial2" Grid.Row="4">
+            <db:Dial180North.FaceColorRange>
+                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
+                <db:ColorPoint HiColor="#2A242C" LowColor="#220000" Value="55" />
+            </db:Dial180North.FaceColorRange>
+            <db:Dial180North.NeedleColorRange>
+                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+            </db:Dial180North.NeedleColorRange>
+        </db:Dial180North>
+
+
+        <Rectangle Grid.Row="1" Height="60"/>
+        <Rectangle Grid.Row="3" Height="60"/>
+
+
+    </Grid>
+</UserControl>

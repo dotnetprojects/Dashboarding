@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Mat3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+    Width="270" Height="50">
+    <Grid x:Name="LayoutRoot" >
+<db:MatrixLedMarquee Panels="10" TimerDuration="00:00:0.1"
+    Mode="SingleShot" x:Name="_marq"
+    MarqueeFinished="_marq_MarqueeFinished"
+    />
+
+    </Grid>
+</UserControl>

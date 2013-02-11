@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Diam1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+ xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+    Width="130" Height="25">
+    <Grid x:Name="LayoutRoot" >
+        <db:DiamondSlider Value="50" />
+    </Grid>
+</UserControl>

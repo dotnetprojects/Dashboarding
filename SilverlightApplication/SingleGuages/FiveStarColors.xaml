@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.FiveStarColors"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="400" Height="300"
+              xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding">
+             
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel>
+  		<db:FiveStarRanking HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Value="50">
+            <db:FiveStarRanking.InRankColor >
+                <db:ColorPoint HiColor="#999999" LowColor="#FFFFFF"  />
+            </db:FiveStarRanking.InRankColor>
+            <db:FiveStarRanking.OutRankColor >
+                <db:ColorPoint HiColor="#000000" LowColor="#222222"  />
+            </db:FiveStarRanking.OutRankColor>
+        </db:FiveStarRanking>
+
+            <TextBlock Height="120" Text=" "/>
+
+            <db:FiveStarRanking HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Value="50">
+                <db:FiveStarRanking.InRankColor >
+                    <db:ColorPoint HiColor="#440044" LowColor="#FF00FF"  />
+                </db:FiveStarRanking.InRankColor>
+                <db:FiveStarRanking.OutRankColor >
+                    <db:ColorPoint HiColor="#000000" LowColor="#330033"  />
+                </db:FiveStarRanking.OutRankColor>
+            </db:FiveStarRanking>
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>

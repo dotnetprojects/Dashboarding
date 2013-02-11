@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Demos.Common.Demonstrators.BoundData"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="24" >
+    <Grid>
+        <StackPanel Orientation="Horizontal" >
+            <Slider Height="22" Width="300" Name="slider1" Value="{Binding Path=CurrentValue, Mode=TwoWay}" Minimum="0" Maximum="100" VerticalAlignment="Top" />
+            <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" Foreground="AntiqueWhite">Change me and see the result!</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

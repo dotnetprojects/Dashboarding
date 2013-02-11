@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.TickCrossCustom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="200" Height="64"
+       xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
+        
+             >
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16" />
+            <RowDefinition Height="16" />
+            <RowDefinition Height="16" />
+            <RowDefinition Height="16" />
+        </Grid.RowDefinitions>
+   
+
+        <db:TickCross Value="0" Width="16" Height="16" >
+            <db:BinaryDashboard.TrueColor>
+                <db:ColorPoint HiColor="#777777" LowColor="#33ff33" Value="9" />
+            </db:BinaryDashboard.TrueColor>
+            <db:BinaryDashboard.FalseColor>
+                <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+            </db:BinaryDashboard.FalseColor>
+        </db:TickCross>
+        <db:TickCross Value="100" Grid.Row="2"  Width="16" Height="16">
+            <db:BinaryDashboard.TrueColor>
+                <db:ColorPoint HiColor="#777777" LowColor="#33ff33" Value="9" />
+            </db:BinaryDashboard.TrueColor>
+            <db:BinaryDashboard.FalseColor>
+                <db:ColorPoint HiColor="#666666" LowColor="#999999" Value="9" />
+            </db:BinaryDashboard.FalseColor>
+        </db:TickCross>
+        <TextBlock Foreground="White" Grid.Row="1" Text="Value = 0 (IsTrue == false)" HorizontalAlignment="Center" ></TextBlock>
+        <TextBlock Foreground="White" Grid.Row="3" Text="Value = 100 (IsTrue == true)" HorizontalAlignment="Center"></TextBlock>
+    </Grid>
+</UserControl>

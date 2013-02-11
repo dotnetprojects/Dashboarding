@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{299C2819-18A7-4409-B7E0-7D4F944B4D11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Help2</RootNamespace>
+    <AssemblyName>Help2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\Bidirection.aml" />
+    <None Include="ExtraDocs\BooleanControls.aml" />
+    <None Include="ExtraDocs\Content Layout.content" />
+    <None Include="ExtraDocs\Dials.aml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f001_allControls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f002_Dial360MinMaxAndFormat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f003_PetrolGauge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f004_facecolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f005_facteTextVisibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f006_FaceTextColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f007_minAndMax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f008_AllDials.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f009_PlainMat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f010_ColoredMat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f011_justMat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f012_AllCharsMat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f014_allBidirectional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f015_DiamondSlider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f016_FiveStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f017_progressBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f019_DiamondSlider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f020_DiamodSliderColors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f021_ThermsPlain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f022_plainMerc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f023_16Seg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\f024_16SegColors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtraDocs\images\fg018_ProgressBarColors.png" />
+    <None Include="ExtraDocs\ScrollingLedMarquee.aml" />
+    <None Include="ExtraDocs\SixteenSegmentLED.aml" />
+    <None Include="ExtraDocs\Sliders.aml" />
+    <None Include="ExtraDocs\Welcome.aml" />
+    <Content Include="Help\Documentation.chm" />
+    <None Include="NewSandcastle.shfbproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Wall2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+ xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+    Width="160" Height="150">
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel Orientation="Horizontal" >
+            <db:WallThermometer x:Name="_ther2"  Value="88" Margin="4,0,0,0" ValueTextColor="DarkBlue"
+                ValueTextFormat="{}{0}c" FaceTextColor="DarkGreen" >
+                <db:WallThermometer.MercuryColorRange>
+                    <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                    <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                    <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+                </db:WallThermometer.MercuryColorRange>
+            </db:WallThermometer>
+
+
+            <db:WallThermometer x:Name="_ther3" Value="45" Margin="4,0,0,0">
+                <db:WallThermometer.MercuryColorRange>
+                    <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                    <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                    <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+                </db:WallThermometer.MercuryColorRange>
+            </db:WallThermometer>
+
+            <db:WallThermometer x:Name="_ther4"  Value="88" Margin="4,0,0,0">
+                <db:WallThermometer.MercuryColorRange>
+                    <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                    <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                    <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+                </db:WallThermometer.MercuryColorRange>
+            </db:WallThermometer>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

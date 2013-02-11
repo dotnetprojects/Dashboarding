@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Therm2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+ xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
+    Width="160" Height="136">
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel Orientation="Horizontal">
+            <db:PlainThermometer x:Name="_ther2" ValueTextColor="Aquamarine" Value="22">
+                <db:PlainThermometer.MercuryColorRange>
+                    <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                    <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                    <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+                </db:PlainThermometer.MercuryColorRange>
+            </db:PlainThermometer>
+
+
+            <db:PlainThermometer x:Name="_ther3" ValueTextColor="Aquamarine" Value="45">
+                <db:PlainThermometer.MercuryColorRange>
+                    <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                    <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                    <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+                </db:PlainThermometer.MercuryColorRange>
+            </db:PlainThermometer>
+
+            <db:PlainThermometer x:Name="_ther4" ValueTextColor="Aquamarine" Value="88">
+                <db:PlainThermometer.MercuryColorRange>
+                    <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                    <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                    <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+                </db:PlainThermometer.MercuryColorRange>
+            </db:PlainThermometer>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

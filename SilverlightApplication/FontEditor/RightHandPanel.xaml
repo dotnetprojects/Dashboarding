@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="SilverlightApplication.FontEditor.RightHandPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <ScrollViewer>
+            <toolkit:WrapPanel x:Name="_wrapPanel" />
+        </ScrollViewer>
+            
+   
+        
+        
+    </Grid>
+</UserControl>

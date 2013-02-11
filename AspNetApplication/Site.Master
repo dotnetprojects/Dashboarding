@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AspNetApplication.Site" %>
+<%@ Register Assembly="System.Web.Silverlight" Namespace="System.Web.UI.SilverlightControls"
+    TagPrefix="asp" %>
+<%@ Register src="Navigation/Navigator.ascx" tagname="Navigator" tagprefix="uc1" %>
+<%@ Register src="Navigation/Footer.ascx" tagname="Footer" tagprefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Silverlight Dashboard components</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/csharp.css" media="screen" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div style="height: 100%;">
+        <div id="wrap">
+            <div id="header">
+                <table >
+                <tr>
+                <td>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx"><asp:Image  ID="Image1" runat="server" Width="64" Height="64" 
+                        ImageUrl="~/dove2.png" /></asp:HyperLink> 
+                   </td>
+                   <td >
+                   <h1> Dave's Silverlight Dashboards and gauges</h1>
+                   </td></tr></table>
+            </div>
+            <div id="right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <uc1:navigator id="Navigator1" runat="server" />
+            <uc2:footer id="Footer1" runat="server" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>

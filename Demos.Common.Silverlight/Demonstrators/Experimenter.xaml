@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="Demos.Common.Demonstrators.Experimenter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Demos.Common.Demonstrators"
+    xmlns:cp="clr-namespace:Demos.Common.Util"
+    Height="Auto" Width="460" >
+    <UserControl.Resources>
+        <local:ConvertColorToBrush x:Key="_convertColorToBrush" />
+        <local:VisibilityToBooleanConverter x:Key="_convertBoolToVisibility" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="108" />
+            <RowDefinition Height="108" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="200" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="230"/>
+        </Grid.ColumnDefinitions>
+        
+        <Rectangle Stroke="Black" RadiusX="10" RadiusY="10" Fill="Black" Grid.RowSpan="4" />
+        <TextBlock Text="Modify common properties" Foreground="AntiqueWhite" FontWeight="bold" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center" Width="148.03" />
+        
+        <!-- Face Text -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16" />
+                <RowDefinition Height="16" />
+                <RowDefinition Height="32" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <TextBlock Margin="5,0,5,0" Grid.Row="0" Foreground="AntiqueWhite" Text=" Face Text" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextAlignment="Center"  />
+
+            <CheckBox  IsChecked="{Binding Path=FaceTextVisibility, Mode=TwoWay, Converter={StaticResource _convertBoolToVisibility} }"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="FaceTextVisibility" ></CheckBox>
+            <Button Click="_buttonClangeFaceTextColor_Click" Grid.Row="2" HorizontalAlignment="Left" Width="120" Height="24" Margin="10,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Fill="{Binding Path=FaceTextColor, Mode=TwoWay, Converter={StaticResource _convertColorToBrush} }" Width="16" Height="16" Stroke="Black"/>
+                    <TextBlock Margin="10,0,0,0" Foreground="Black" Text="FaceTextColor"/>
+                </StackPanel>
+            </Button>
+
+            <StackPanel Margin="10,0,0,0"  Orientation="Vertical" Grid.Row="3" >
+                <TextBlock Text="FaceTextFormat"  Foreground="AntiqueWhite" VerticalAlignment="Center"  />
+                <TextBox Text="{Binding Path=FaceTextFormat, Mode=TwoWay}" HorizontalAlignment="Left" Width="120"  />
+            </StackPanel>
+
+        </Grid>
+
+
+        <!-- Value Text -->
+        <Grid Grid.Row="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16" />
+                <RowDefinition Height="16" />
+                <RowDefinition Height="32" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <TextBlock  Margin="5,0,5,0" Grid.Row="0" Foreground="AntiqueWhite" Text="Value Text" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextAlignment="Center"  />
+
+            <CheckBox  IsChecked="{Binding Path=ValueTextVisibility, Mode=TwoWay, Converter={StaticResource _convertBoolToVisibility} }"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="ValueTextVisibility"></CheckBox>
+            <Button Click="_buttonClangeValueTextColor_Click" Grid.Row="2" HorizontalAlignment="Left" Width="120" Height="24" Margin="10,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Fill="{Binding Path=ValueTextColor, Mode=TwoWay, Converter={StaticResource _convertColorToBrush} }" Width="16" Height="16" Stroke="Black"/>
+                    <TextBlock Margin="10,0,0,0" Foreground="Black" Text="ValueTextColor"/>
+                </StackPanel>
+            </Button>
+
+            <StackPanel Margin="10,0,0,0"  Orientation="Vertical" Grid.Row="3" >
+                <TextBlock Text="ValueTextFormat"  Foreground="AntiqueWhite" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Path=ValueTextFormat, Mode=TwoWay}" Width="120"  HorizontalAlignment="Left"/>
+            </StackPanel>
+
+        </Grid>
+
+        <!-- Misc -->
+        <Grid Grid.Row="3" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16" />
+                <RowDefinition Height="16" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <TextBlock  Margin="5,0,5,0" Grid.Row="0" Foreground="AntiqueWhite" Text="Miscellaneous" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextAlignment="Center"  />
+
+            <CheckBox  IsChecked="{Binding Path=IsBidirectional, Mode=TwoWay}"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="IsBidirectional"></CheckBox>
+           
+            <StackPanel Margin="10,0,0,0"  Orientation="Vertical" Grid.Row="2" >
+                <TextBlock Text="Minimum"  Foreground="AntiqueWhite" VerticalAlignment="Top"/>
+                <TextBox Text="{Binding Path=Minimum, Mode=TwoWay}" Width="120"  HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel Margin="10,0,0,0"  Orientation="Vertical" Grid.Row="3" >
+                <TextBlock Text="Maximum"  Foreground="AntiqueWhite" VerticalAlignment="Top"/>
+                <TextBox Text="{Binding Path=Maximum, Mode=TwoWay}" Width="120"  HorizontalAlignment="Left" />
+            </StackPanel>
+            <StackPanel Margin="10,0,0,0"  Orientation="Vertical" Grid.Row="4" >
+                <TextBlock Text="AnimationDuration"  Foreground="AntiqueWhite" VerticalAlignment="Top"/>
+                <TextBox Text="{Binding Path=AnimationDuration, Mode=TwoWay}" Width="120"  HorizontalAlignment="Left" />
+            </StackPanel>
+
+            <StackPanel Margin="10,0,0,0"  Orientation="Vertical" Grid.Row="5" >
+                <TextBlock Text="Value"  Foreground="AntiqueWhite" VerticalAlignment="Top"/>
+                <Slider  Maximum="{Binding Path=Maximum}" Minimum="{Binding Path=Minimum}" Value="{Binding Path=CurrentValue, Mode=TwoWay}"/>
+            </StackPanel>
+
+
+        </Grid>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="5">
+            <local:ColorRangeExperimenter x:Name="_colorRange1" Title="FaceColorRange" Points="{Binding Path=FaceColorRange, Mode=TwoWay}"  Grid.Row="4"/>
+
+            <local:ColorRangeExperimenter x:Name="_colorRange2" Title="NeedleColorRange" Points="{Binding Path=NeedleColorRange, Mode=TwoWay}"  Grid.Row="5"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

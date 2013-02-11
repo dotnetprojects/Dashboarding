@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="SilverlightApplication.SingleGuages.FirstStep"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+       xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
+>
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <db:Dial360 />
+    </Grid>
+</UserControl>

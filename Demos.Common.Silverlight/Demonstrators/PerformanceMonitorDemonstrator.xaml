@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Demos.Common.Demonstrators.PerformanceMonitorDemonstrator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+    xmlns:ot="clr-namespace:Demos.Common.Demonstrators"
+             >
+    <Grid>
+        
+        <StackPanel Width="340" >
+            <StackPanel Orientation="Horizontal">
+                <Button Width="32" Click="Button_Click"></Button>
+                <ot:BoundData/>
+
+            </StackPanel>
+            <db:PerformanceMonitor Margin="0,10,0,0" Value="{Binding Path=CurrentValue}" x:Name="_l" Height="140" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+            GridLine="AntiqueWhite"
+            GraphLine="White"
+            Axis="Bisque"
+            ValueTextColor="BlanchedAlmond"
+            GraphFillFrom="Gray"
+            GraphFillTo="DarkGray"
+            
+                               
+        />
+
+            <db:PerformanceMonitor Margin="0,10,0,0" Value="{Binding Path=CurrentValue, Mode=TwoWay}"  x:Name="_l2" Height="140" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+            GridLine="White"
+            GraphLine="LightGreen"
+            Axis="Red"
+            ValueTextColor="Yellow"
+            GraphFillFrom="Blue"
+            GraphFillTo="Magenta"
+            
+                               
+        />
+
+            <db:PerformanceMonitor Margin="0,10,0,0" Value="{Binding Path=CurrentValue}"  x:Name="_l3" Height="140" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+            GridLine="BlueViolet"
+            GraphLine="Magenta"
+            Axis="LightSteelBlue"
+            ValueTextColor="Lavender"
+            GraphFillFrom="#00000000"
+            GraphFillTo="#00000000"
+           
+                               
+        />
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>
