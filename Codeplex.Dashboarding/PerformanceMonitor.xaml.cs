@@ -200,6 +200,15 @@ namespace Codeplex.Dashboarding
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets the width of FaceText
+        /// </summary>
+        public double FaceTextWidth
+        {
+            get { return this.faceTextColumn.Width.Value; }
+            set { this.faceTextColumn.Width = new GridLength(value); }
+        }
+
         #endregion Properties
 
         #region Methods
@@ -415,10 +424,13 @@ namespace Codeplex.Dashboarding
 
             for (int i = (int)startPoint; i < cw; i++)
             {
-                double y = ch - (normalised[idx] * ch);
+                if (idx >= 0 && idx < normalised.Count)
+                {
+                    double y = ch - (normalised[idx]*ch);
 
-                pf.Segments.Add(new LineSegment { Point = new Point(i + 1, y) });
-                idx++;
+                    pf.Segments.Add(new LineSegment {Point = new Point(i + 1, y)});
+                    idx++;
+                }
             }
 
             pf.Segments.Add(new LineSegment { Point = new Point(cw, ch) });

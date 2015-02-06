@@ -6,7 +6,7 @@
              >
     <Grid>
         
-        <StackPanel Width="340" >
+        <StackPanel >
             <StackPanel Orientation="Horizontal">
                 <Button Width="32" Click="Button_Click"></Button>
                 <ot:BoundData/>
@@ -19,26 +19,29 @@
             ValueTextColor="BlanchedAlmond"
             GraphFillFrom="Gray"
             GraphFillTo="DarkGray"
+                                   Maximum="60000"
             
                                
         />
 
-            <db:PerformanceMonitor Margin="0,10,0,0" Value="{Binding Path=CurrentValue, Mode=TwoWay}"  x:Name="_l2" Height="140" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+            <db:PerformanceMonitor Value="{Binding Path=CurrentValue}" x:Name="_l2" Height="140" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
             GridLine="White"
             GraphLine="LightGreen"
             Axis="Red"
             ValueTextColor="Yellow"
             GraphFillFrom="Blue"
+                                   Maximum="60000"
             GraphFillTo="Magenta"
             
                                
         />
 
-            <db:PerformanceMonitor Margin="0,10,0,0" Value="{Binding Path=CurrentValue}"  x:Name="_l3" Height="140" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+            <db:PerformanceMonitor Margin="0,10,0,0" FaceTextWidth="60"  Value="{Binding Path=CurrentValue}"  x:Name="_l3" Height="140" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
             GridLine="BlueViolet"
             GraphLine="Magenta"
             Axis="LightSteelBlue"
             ValueTextColor="Lavender"
+                                   Maximum="60000"
             GraphFillFrom="#00000000"
             GraphFillTo="#00000000"
            
