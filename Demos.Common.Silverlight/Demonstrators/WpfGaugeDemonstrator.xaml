@@ -1,0 +1,16 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wpfGauge="clr-namespace:WpfGauge;assembly=DotNetProjects.Dashboarding"
+    x:Class="Demos.Common.Demonstrators.WpfGaugeDemonstrator"
+    mc:Ignorable="d"
+    >
+    <Canvas Height="480"  Width="720">
+     
+        <!-- title -->
+        <TextBlock FontWeight="bold" Foreground="AntiqueWhite" FontSize="24" HorizontalAlignment="Left" Text="Wpf Gauge" Canvas.Top="10" />
+        <wpfGauge:Gauge Canvas.Left="229" Canvas.Top="84" Value="133" MaxValue="300" AutoScale="False" />
+    </Canvas>
+</UserControl>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DotNetProjects.Dashboarding</id>
+    <version>$version$</version>
+    <authors>DotNetProjects</authors>
+    <owners>DotNetProjects</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/dotnetprojects/Dashboarding</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Framework Assembly for DotNetProjects.Dashboarding</description>
+    <copyright>Copyright 2015</copyright>
+  </metadata>
+  <files>
+    <file src="..\Codeplex.Dashboarding.Wpf\bin\Debug\DotNetProjects.Dashboarding.dll" target="lib\net40" />
+    <file src="..\Codeplex.Dashboarding.Wpf\bin\Debug\DotNetProjects.Dashboarding.pdb" target="lib\net40" />
+  </files>
+</package>

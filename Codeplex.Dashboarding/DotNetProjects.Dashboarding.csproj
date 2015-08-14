@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4AC50D91-3409-41EC-B09B-4B15F82F731A}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetProjects.Dashboarding</RootNamespace>
+    <AssemblyName>DotNetProjects.Dashboarding</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT CODE_ANALYSIS</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Bin\Debug\DotNetProjects.Dashboarding.xml</DocumentationFile>
+    <WarningsAsErrors>1591</WarningsAsErrors>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <NoWarn>1607</NoWarn>
+    <CodeAnalysisRuleSet>Migrated rules for Codeplex.Dashboarding.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyVersion.cs" />
+    <Compile Include="BidirectionalDashboard.cs" />
+    <Compile Include="BiDirectionalDial.cs" />
+    <Compile Include="BinaryDashboard.cs" />
+    <Compile Include="ColorPoint.cs" />
+    <Compile Include="ColorPointCollection.cs" />
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="DashboardValueChangedEventArgs.cs" />
+    <Compile Include="Dial180.cs" />
+    <Compile Include="Dial180East.xaml.cs">
+      <DependentUpon>Dial180East.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial180North.xaml.cs">
+      <DependentUpon>Dial180North.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial180South.xaml.cs">
+      <DependentUpon>Dial180South.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial180West.xaml.cs">
+      <DependentUpon>Dial180West.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90.cs" />
+    <Compile Include="Dial90East.xaml.cs">
+      <DependentUpon>Dial90East.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90North.xaml.cs">
+      <DependentUpon>Dial90North.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90NorthEast.xaml.cs">
+      <DependentUpon>Dial90NorthEast.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90NorthWest.xaml.cs">
+      <DependentUpon>Dial90NorthWest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90South.xaml.cs">
+      <DependentUpon>Dial90South.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90SouthEast.xaml.cs">
+      <DependentUpon>Dial90SouthEast.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90SouthWest.xaml.cs">
+      <DependentUpon>Dial90SouthWest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial90West.xaml.cs">
+      <DependentUpon>Dial90West.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DiamondSlider.xaml.cs">
+      <DependentUpon>DiamondSlider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Knob360.xaml.cs">
+      <DependentUpon>Knob360.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MatrixLedCharacter.xaml.cs">
+      <DependentUpon>MatrixLedCharacter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MatrixLedCharacterDefintions.cs" />
+    <Compile Include="MatrixLedMarquee.xaml.cs">
+      <DependentUpon>MatrixLedMarquee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MatrixScrollEventArgs.cs" />
+    <Compile Include="Odometer.xaml.cs">
+      <DependentUpon>Odometer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OdometerDigit.xaml.cs">
+      <DependentUpon>OdometerDigit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlainThermometer.xaml.cs">
+      <DependentUpon>PlainThermometer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformIndependentDashboard.cs" />
+    <Compile Include="ProgressBar.xaml.cs">
+      <DependentUpon>ProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PerformanceMonitor.xaml.cs">
+      <DependentUpon>PerformanceMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DecadeVuMeter.xaml.cs">
+      <DependentUpon>DecadeVuMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dial360.xaml.cs">
+      <DependentUpon>Dial360.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FiveStarRanking.xaml.cs">
+      <DependentUpon>FiveStarRanking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoundLed.xaml.cs">
+      <DependentUpon>RoundLed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scale.xaml.cs">
+      <DependentUpon>Scale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SevenSegmentLED.xaml.cs">
+      <DependentUpon>SevenSegmentLED.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SixteenSegmentLED.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SixteenSegmentLED.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TickCross.xaml.cs">
+      <DependentUpon>TickCross.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WallThermometer.xaml.cs">
+      <DependentUpon>WallThermometer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfGauge\Defaults.cs" />
+    <Compile Include="WpfGauge\ExtensionMethods.cs" />
+    <Compile Include="WpfGauge\Global.cs" />
+    <Compile Include="WpfGauge\GoalMarker.xaml.cs">
+      <DependentUpon>GoalMarker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfGauge\SubtractionFormatter.cs" />
+    <Compile Include="WpfGauge\TickMarker.xaml.cs">
+      <DependentUpon>TickMarker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfGauge\ValueTextMarginConverter.cs" />
+    <Compile Include="WpfGauge\WpfGauge.xaml.cs">
+      <DependentUpon>WpfGauge.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Dial180East.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial180North.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial180South.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial180West.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90East.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90North.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90NorthEast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90NorthWest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90South.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90SouthEast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90SouthWest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial90West.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DiamondSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Knob360.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MatrixLedCharacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MatrixLedMarquee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Odometer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OdometerDigit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PerformanceMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DecadeVuMeter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dial360.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FiveStarRanking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PlainThermometer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RoundLed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Scale.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SevenSegmentLED.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SixteenSegmentLED.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TickCross.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WallThermometer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfGauge\GoalMarker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfGauge\TickMarker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfGauge\WpfGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="odometerStrip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial180East.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial180South.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial360.Icon.png" />
+    <None Include="Migrated rules for Codeplex.Dashboarding.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial90NorthEast.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial90NorthWest.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial90SouthEast.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial90SouthWe-st.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Knob360.Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial180North.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial180West.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\DiamondSlider.Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Codeplex.Dashboarding\MatrixLedCharacter.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\MatrixLedMarquee.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\Odometer.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\OdometerDigit.Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Codeplex.Dashboarding\DecadeVuMeter.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\FiveStarRanking.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\PlainThermometer.Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Codeplex.Dashboarding\PerformanceMonitor.Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Codeplex.Dashboarding\Dial90SouthWest.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\ProgressBar.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\RoundLed.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\SixteenSegmentLED.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\TickCross.Icon.png" />
+    <EmbeddedResource Include="Codeplex.Dashboarding\WallThermometer.Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\BidirectionalDashboard\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WpfGauge\gauge_background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

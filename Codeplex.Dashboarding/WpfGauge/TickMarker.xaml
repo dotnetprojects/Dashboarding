@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WpfGauge.TickMarker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             DataContext="{Binding RelativeSource={RelativeSource Self}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid Width="{Binding Path=Width}" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <RotateTransform Angle="{Binding Path=Angle}" />
+            </Grid.RenderTransform>
+            <Line Margin="{Binding Path=LineMargin}" StrokeThickness="{Binding Path=StrokeThickness}" Stroke="{Binding Path=TickMarkColor}" Width="{Binding Path=LineHeight}" X1="100">
+                <Line.Effect>
+                    <BlurEffect Radius="3" />
+                </Line.Effect>
+            </Line>
+        </Grid>
+
+        <Grid Height="{Binding Path=Height}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <RotateTransform Angle="{Binding Path=LabelAngle}" />
+            </Grid.RenderTransform>
+            <TextBlock x:Name="TickLabel" Style="{Binding Path=TickLabelStyle}"
+                Margin="{Binding Path=LabelMargin}" Width="100" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                Text="{Binding Path=Label}" />
+        </Grid>
+
+    </Grid>
+</UserControl>
