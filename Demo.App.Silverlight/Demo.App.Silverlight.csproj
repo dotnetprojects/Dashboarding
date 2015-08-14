@@ -100,9 +100,9 @@
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Codeplex.Dashboarding\Codeplex.Dashboarding.csproj">
+    <ProjectReference Include="..\Codeplex.Dashboarding\DotNetProjects.Dashboarding.csproj">
       <Project>{4AC50D91-3409-41EC-B09B-4B15F82F731A}</Project>
-      <Name>Codeplex.Dashboarding</Name>
+      <Name>DotNetProjects.Dashboarding</Name>
     </ProjectReference>
     <ProjectReference Include="..\Demos.Common.Silverlight\Demos.Common.Silverlight.csproj">
       <Project>{703E22CA-78BF-4394-9E36-64E5F26AE5B5}</Project>

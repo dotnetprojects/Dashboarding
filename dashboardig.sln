@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50703928-6F54-468B-B531-19D8776F5641}"
 	ProjectSection(SolutionItems) = preProject
 		banner.bmp = banner.bmp
@@ -13,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetApplication", "AspNet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightApplication", "SilverlightApplication\SilverlightApplication.csproj", "{E1A474A1-9984-44C8-A7DF-4760B33B3D68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codeplex.Dashboarding", "Codeplex.Dashboarding\Codeplex.Dashboarding.csproj", "{4AC50D91-3409-41EC-B09B-4B15F82F731A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetProjects.Dashboarding", "Codeplex.Dashboarding\DotNetProjects.Dashboarding.csproj", "{4AC50D91-3409-41EC-B09B-4B15F82F731A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codeplex.Dashboarding.Wpf", "Codeplex.Dashboarding.Wpf\Codeplex.Dashboarding.Wpf.csproj", "{60E35411-C181-42A7-A438-58013A7EA455}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetProjects.Dashboarding.Wpf", "Codeplex.Dashboarding.Wpf\DotNetProjects.Dashboarding.Wpf.csproj", "{60E35411-C181-42A7-A438-58013A7EA455}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demos.Common.Wpf", "Demos.Common.Wpf\Demos.Common.Wpf.csproj", "{4D125E58-0B67-4BF6-83E1-A0BA1587E241}"
 EndProject

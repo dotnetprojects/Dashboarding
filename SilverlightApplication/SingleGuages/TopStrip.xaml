@@ -5,7 +5,7 @@
     xmlns:col="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 xmlns:demo="clr-namespace:SilverlightApplication.SingleGuages"
         xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"       
-       xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
+       xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"             
         
   Width="800" Height="200" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
     <Grid x:Name="LayoutRoot" >

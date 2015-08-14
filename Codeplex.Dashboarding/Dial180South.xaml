@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              xmlns:db="clr-namespace:Codeplex.Dashboarding"
      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
-     xmlns:Codeplex_Dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+     xmlns:Codeplex_Dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
      Height="90" Width="162"
     >
 

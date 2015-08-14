@@ -173,6 +173,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="..\Demos.Common.Silverlight\Demonstrators\WpfGaugeDemonstrator.xaml">
+      <Link>Demonstrators\WpfGaugeDemonstrator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="..\Demos.Common.Silverlight\Util\ColorPicker.xaml">
       <Link>Util\ColorPicker.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -265,6 +270,9 @@
     <Compile Include="..\Demos.Common.Silverlight\Demonstrators\VisibilityToBooleanConverter.cs">
       <Link>Demonstrators\VisibilityToBooleanConverter.cs</Link>
     </Compile>
+    <Compile Include="..\Demos.Common.Silverlight\Demonstrators\WpfGaugeDemonstrator.xaml.cs">
+      <Link>Demonstrators\WpfGaugeDemonstrator.xaml.cs</Link>
+    </Compile>
     <Compile Include="..\Demos.Common.Silverlight\Util\ColorPicker.xaml.cs">
       <Link>Util\ColorPicker.xaml.cs</Link>
     </Compile>
@@ -301,9 +309,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Codeplex.Dashboarding.Wpf\Codeplex.Dashboarding.Wpf.csproj">
+    <ProjectReference Include="..\Codeplex.Dashboarding.Wpf\DotNetProjects.Dashboarding.Wpf.csproj">
       <Project>{60E35411-C181-42A7-A438-58013A7EA455}</Project>
-      <Name>Codeplex.Dashboarding.Wpf</Name>
+      <Name>DotNetProjects.Dashboarding.Wpf</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

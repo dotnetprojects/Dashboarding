@@ -6,7 +6,7 @@
 	mc:Ignorable="d"
 	x:Class="SilverlightApplication.UserControl1"
 	d:DesignWidth="640" d:DesignHeight="480" 
-	 xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
+	 xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"             
 
     >
 

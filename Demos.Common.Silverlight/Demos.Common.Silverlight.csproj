@@ -61,6 +61,9 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demonstrators\WpfGaugeDemonstrator.xaml.cs">
+      <DependentUpon>WpfGaugeDemonstrator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Demonstrators\AllControlsDemonstrator.xaml.cs">
       <DependentUpon>AllControlsDemonstrator.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Demonstrators\WpfGaugeDemonstrator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Demonstrators\AllControlsDemonstrator.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -234,9 +241,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Codeplex.Dashboarding\Codeplex.Dashboarding.csproj">
+    <ProjectReference Include="..\Codeplex.Dashboarding\DotNetProjects.Dashboarding.csproj">
       <Project>{4AC50D91-3409-41EC-B09B-4B15F82F731A}</Project>
-      <Name>Codeplex.Dashboarding</Name>
+      <Name>DotNetProjects.Dashboarding</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />

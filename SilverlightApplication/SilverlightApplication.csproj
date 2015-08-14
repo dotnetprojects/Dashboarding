@@ -631,9 +631,9 @@
     <Resource Include="Images\home.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Codeplex.Dashboarding\Codeplex.Dashboarding.csproj">
+    <ProjectReference Include="..\Codeplex.Dashboarding\DotNetProjects.Dashboarding.csproj">
       <Project>{4AC50D91-3409-41EC-B09B-4B15F82F731A}</Project>
-      <Name>Codeplex.Dashboarding</Name>
+      <Name>DotNetProjects.Dashboarding</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />

@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
     xmlns:db="clr-namespace:Codeplex.Dashboarding"
 Width="100" Height="30"
-	xmlns:Codeplex_Dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding">
+	xmlns:Codeplex_Dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding">
 
     <Grid x:Name="LayoutRoot" >
         <Grid.Resources>
