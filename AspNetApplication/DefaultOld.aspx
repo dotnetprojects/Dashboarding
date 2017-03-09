@@ -59,7 +59,7 @@
         To add controls to a XAML file you need to create a namespace, to make the samples
         consistant we will use the following:</p>
     <p>
-        <code>xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
+        <code>xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
  
         </code>
     </p>
@@ -85,7 +85,7 @@
                 class="kwrd">="SilverlightApplication.SingleGuages.FirstStep"</span>
                 <span class="attr">xmlns</span><span class="kwrd">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span> 
                 <span class="attr">xmlns:x</span><span class="kwrd">="http://schemas.microsoft.com/winfx/2006/xaml"</span> 
-                <span class="attr">xmlns:db</span><span class="kwrd">="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"</span>
+                <span class="attr">xmlns:db</span><span class="kwrd">="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"</span>
                     class="kwrd">&gt;</span>
                 <span class="kwrd">&lt;</span><span class="html">Grid</span> <span class="attr">x:Name</span><span
                     class="kwrd">="LayoutRoot"</span> <span class="attr">Background</span><span class="kwrd">="Transparent"</span><span
@@ -121,7 +121,7 @@
                 class="kwrd">="SilverlightApplication.SingleGuages.SecondStep"</span>
                <span class="attr">xmlns</span><span class="kwrd">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span> 
                 <span class="attr">xmlns:x</span><span class="kwrd">="http://schemas.microsoft.com/winfx/2006/xaml"</span> 
-                <span class="attr">xmlns:db</span><span class="kwrd">="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"</span>
+                <span class="attr">xmlns:db</span><span class="kwrd">="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"</span>
                     class="kwrd">&gt;</span>
                 <span class="kwrd">&lt;</span><span class="html">Grid</span> <span class="attr">x:Name</span><span
                     class="kwrd">="LayoutRoot"</span> <span class="attr">Background</span><span class="kwrd">="Transparent"</span><span
@@ -193,7 +193,7 @@
             <span class="kwrd">&lt;</span><span class="html">UserControl</span> <span class="attr">x:Class</span><span class="kwrd">="SilverlightApplication.SingleGuages.FourthStep"</span>
                <span class="attr">xmlns</span><span class="kwrd">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"</span> 
                 <span class="attr">xmlns:x</span><span class="kwrd">="http://schemas.microsoft.com/winfx/2006/xaml"</span> 
-                <span class="attr">xmlns:db</span><span class="kwrd">="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"</span>
+                <span class="attr">xmlns:db</span><span class="kwrd">="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"</span>
                 <span class="kwrd">&gt;</span>
                 <span class="kwrd">&lt;</span><span class="html">Grid</span> <span class="attr">x:Name</span><span class="kwrd">="LayoutRoot"</span> <span class="attr">Background</span><span class="kwrd">="Transparent"</span><span class="kwrd">&gt;</span>
                     <span class="kwrd">&lt;</span><span class="html">db:Dial360</span> <span class="attr">x:Name</span><span class="kwrd">="_dial"</span>  <span class="attr">Value</span><span class="kwrd">="{Binding MilesPerHour, Mode=OneWay}"</span>  <span class="kwrd">/&gt;</span>

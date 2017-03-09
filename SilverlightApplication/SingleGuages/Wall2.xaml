@@ -1,7 +1,7 @@
 ﻿<UserControl x:Class="SilverlightApplication.SingleGuages.Wall2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
- xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding" 
+ xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" 
     Width="160" Height="150">
     <Grid x:Name="LayoutRoot" >
         <StackPanel Orientation="Horizontal" >

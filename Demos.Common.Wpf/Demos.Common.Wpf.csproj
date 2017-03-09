@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Demos.Common</RootNamespace>
     <AssemblyName>Demos.Common</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -18,12 +18,6 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +41,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -65,13 +58,9 @@
       <Link>Demonstrators\AllControlsDemonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\BooleanDemonstrator.xaml">
       <Link>Demonstrators\BooleanDemonstrator.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -79,13 +68,9 @@
       <Link>Demonstrators\BoundData.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\ColorRangeExperimenter.xaml">
       <Link>Demonstrators\ColorRangeExperimenter.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -93,13 +78,9 @@
       <Link>Demonstrators\Dial180Demonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\Dial360Demonstrator.xaml">
       <Link>Demonstrators\Dial360Demonstrator.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -107,13 +88,9 @@
       <Link>Demonstrators\Dial90Demonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\Experimenter.xaml">
       <Link>Demonstrators\Experimenter.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -121,13 +98,9 @@
       <Link>Demonstrators\Knob360Demonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\LedMarqueeDemonstrator.xaml">
       <Link>Demonstrators\LedMarqueeDemonstrator.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -135,13 +108,9 @@
       <Link>Demonstrators\MatrixLedCharacterDemonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\OdometerDemonstrator.xaml">
       <Link>Demonstrators\OdometerDemonstrator.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -149,13 +118,9 @@
       <Link>Demonstrators\PerformanceMonitorDemonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\PlainThermometerDemonstrator.xaml">
       <Link>Demonstrators\PlainThermometerDemonstrator.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -163,18 +128,9 @@
       <Link>Demonstrators\ProgressbarDemonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Demonstrators\VduMeterDemonstrator.xaml">
       <Link>Demonstrators\VduMeterDemonstrator.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="..\Demos.Common.Silverlight\Demonstrators\WpfGaugeDemonstrator.xaml">
-      <Link>Demonstrators\WpfGaugeDemonstrator.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -182,13 +138,9 @@
       <Link>Util\ColorPicker.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="..\Demos.Common.Silverlight\Util\PopupColorPicker.xaml">
       <Link>Util\PopupColorPicker.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -270,9 +222,6 @@
     <Compile Include="..\Demos.Common.Silverlight\Demonstrators\VisibilityToBooleanConverter.cs">
       <Link>Demonstrators\VisibilityToBooleanConverter.cs</Link>
     </Compile>
-    <Compile Include="..\Demos.Common.Silverlight\Demonstrators\WpfGaugeDemonstrator.xaml.cs">
-      <Link>Demonstrators\WpfGaugeDemonstrator.xaml.cs</Link>
-    </Compile>
     <Compile Include="..\Demos.Common.Silverlight\Util\ColorPicker.xaml.cs">
       <Link>Util\ColorPicker.xaml.cs</Link>
     </Compile>
@@ -309,9 +258,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Codeplex.Dashboarding.Wpf\DotNetProjects.Dashboarding.Wpf.csproj">
+    <ProjectReference Include="..\Codeplex.Dashboarding.Wpf\Codeplex.Dashboarding.Wpf.csproj">
       <Project>{60E35411-C181-42A7-A438-58013A7EA455}</Project>
-      <Name>DotNetProjects.Dashboarding.Wpf</Name>
+      <Name>Codeplex.Dashboarding.Wpf</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
