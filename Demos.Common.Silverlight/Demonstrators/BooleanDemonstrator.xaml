@@ -6,7 +6,7 @@
     <Grid>
             
             <StackPanel Orientation="Horizontal" >
-                <CheckBox Margin="10,0,0,0" IsChecked="{Binding Path=CurrentValue, Mode=TwoWay}"></CheckBox>
+                <CheckBox Margin="10,0,0,0" IsChecked="{Binding Path=CurrentValue, Mode=TwoWay}" />
                 <TextBlock Margin="10,0,0,0" Foreground="AntiqueWhite">Chek me to test two way data binding</TextBlock>
             </StackPanel>
             
@@ -64,6 +64,70 @@
      
     </Grid>
 </UserControl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

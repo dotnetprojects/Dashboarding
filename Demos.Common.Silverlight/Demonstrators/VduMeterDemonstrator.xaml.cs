@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace Demos.Common.Demonstrators
 {
@@ -8,10 +7,7 @@ namespace Demos.Common.Demonstrators
 
         #region IDemonstrateDials Members
 
-        public string DemoName
-        {
-            get { return "Decade VU Meter"; }
-        }
+        public string DemoName => @"Decade VU Meter";
 
         public UserControl Create()
         {
@@ -23,12 +19,12 @@ namespace Demos.Common.Demonstrators
     /// <summary>
     /// Interaction logic for VduMeterDemonstrator.xaml
     /// </summary>
-    public partial class VduMeterDemonstrator : UserControl
+    public partial class VduMeterDemonstrator
     {
         public VduMeterDemonstrator()
         {
             InitializeComponent();
-            this.DataContext = new BoundObject();
+            DataContext = new BoundObject();
         }
     }
 }

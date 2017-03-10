@@ -1,40 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 
 namespace Demos.Common.Util
 {
-    public partial class PopupColorPicker : UserControl
+    public partial class PopupColorPicker 
     {
-        public static PopupColorPicker Instance { get; set; }
+        public delegate void ColorChangedEventHandler(object sender, ColorSelectedEventargs e);
+
+        private ColorChangedEventHandler _lastMethod;
+
+        private Color _selectedColor;
 
         public PopupColorPicker()
         {
             InitializeComponent();
-            Loaded += new RoutedEventHandler(IAmLoaded);
-        }
-        void IAmLoaded(object sender, RoutedEventArgs e)
-        {
-            if (_picker != null)
-                _picker.ColorChanged += PickerColorChanged;
+            Loaded += AmLoaded;
         }
 
-        private Color _selectedColor;
+        public static PopupColorPicker Instance { get; set; }
 
         public Color SelectedColor
         {
-            get
-            {
-                return _selectedColor;
-            }
+            get { return _selectedColor; }
             set
             {
                 _selectedColor = value;
@@ -42,54 +30,58 @@ namespace Demos.Common.Util
             }
         }
 
-        void PickerColorChanged(object sender, ColorChangedEventArgs e)
+        private void AmLoaded(object sender, RoutedEventArgs e)
         {
-            _selectedColor = e.newColor.Color;
+            if (_picker != null)
+                _picker.ColorChanged += PickerColorChanged;
+        }
+
+        private void PickerColorChanged(object sender, ColorChangedEventArgs e)
+        {
+            _selectedColor = e.NewColor.Color;
         }
 
         public event EventHandler<EventArgs> Closed;
 
+        // ReSharper disable once UnusedMember.Local
         private void OnClose()
         {
-            if (Closed != null)
-            {
-                Closed(this, EventArgs.Empty);
-            }
+            Closed?.Invoke(this, EventArgs.Empty);
         }
 
         private void ButtonOk_Click(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Collapsed;
+            Visibility = Visibility.Collapsed;
             OnColorSelected(_picker.SelectedColor.Color);
         }
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Collapsed;
+            Visibility = Visibility.Collapsed;
             if (ColorChangedEvent != null)
             {
                 ColorChangedEvent -= _lastMethod;
             }
         }
 
-
-        public delegate void ColorChangedEventHandler(object sender, ColorSelectedEventargs e);
-
         private event ColorChangedEventHandler ColorChangedEvent;
 
 
         public event ColorChangedEventHandler ColorChanged
         {
-            add { ColorChangedEvent += value; _lastMethod = value; }
+            add
+            {
+                ColorChangedEvent += value;
+                _lastMethod = value;
+            }
             remove { ColorChangedEvent -= value; }
         }
 
-        private ColorChangedEventHandler _lastMethod;
         protected virtual void OnColorSelected(Color c)
         {
             if (ColorChangedEvent != null)
             {
-                ColorChangedEvent(this, new ColorSelectedEventargs { Color = c });
+                ColorChangedEvent(this, new ColorSelectedEventargs {Color = c});
                 ColorChangedEvent -= _lastMethod;
             }
         }
@@ -97,7 +89,7 @@ namespace Demos.Common.Util
 
         public void Show()
         {
-            this.Visibility = Visibility.Visible;
+            Visibility = Visibility.Visible;
         }
     }
 }

@@ -36,10 +36,7 @@
             Maximum="{Binding Path=Maximum}"     
             AnimationDuration="{Binding Path=AnimationDuration}"
               
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                              >
-
-            </dashboarding:Dial180North>
+            Value="{Binding CurrentValue, Mode=TwoWay}" />
 
             <dashboarding:Dial180South  Grid.Row="1" Margin="0,4,0,0" 
             FaceTextVisibility="{Binding Path=FaceTextVisibility}"
@@ -57,11 +54,7 @@
             Maximum="{Binding Path=Maximum}"     
             AnimationDuration="{Binding Path=AnimationDuration}"
               
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                              >
-
-            </dashboarding:Dial180South>
-
+            Value="{Binding CurrentValue, Mode=TwoWay}" />
 
 
             <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
@@ -81,10 +74,7 @@
             Maximum="{Binding Path=Maximum}"     
             AnimationDuration="{Binding Path=AnimationDuration}"
               
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                >
-
-                </dashboarding:Dial180West>
+            Value="{Binding CurrentValue, Mode=TwoWay}" />
 
 
                 <dashboarding:Dial180East Margin="4,0,0,0" 
@@ -103,12 +93,9 @@
             Maximum="{Binding Path=Maximum}"     
             AnimationDuration="{Binding Path=AnimationDuration}"
               
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                     >
+            Value="{Binding CurrentValue, Mode=TwoWay}" />
 
-            </dashboarding:Dial180East>
-
-</StackPanel>
+            </StackPanel>
             
             
             
@@ -121,6 +108,246 @@
 
     </Grid>
 </UserControl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -35,11 +35,7 @@
             Maximum="{Binding Path=Maximum}"     
             AnimationDuration="{Binding Path=AnimationDuration}"
               
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                              
-                     >
-
-            </dashboarding:Knob360>
+            Value="{Binding CurrentValue, Mode=TwoWay}" />
 
 
         </StackPanel>
@@ -51,4 +47,6 @@
 
     </Grid>
 </UserControl>
+
+
 

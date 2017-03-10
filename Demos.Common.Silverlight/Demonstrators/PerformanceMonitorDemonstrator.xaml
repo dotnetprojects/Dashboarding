@@ -8,7 +8,7 @@
         
         <StackPanel Width="340" >
             <StackPanel Orientation="Horizontal">
-                <Button Width="32" Click="Button_Click"></Button>
+                <Button Width="32" Click="Button_Click" />
                 <ot:BoundData/>
 
             </StackPanel>
@@ -49,3 +49,4 @@
         </StackPanel>
     </Grid>
 </UserControl>
+

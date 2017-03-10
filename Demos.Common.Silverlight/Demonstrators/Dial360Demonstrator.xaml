@@ -35,12 +35,9 @@
             Maximum="{Binding Path=Maximum}"     
             AnimationDuration="{Binding Path=AnimationDuration}"
               
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                              >
+            Value="{Binding CurrentValue, Mode=TwoWay}" />
 
-            </dashboarding:Dial360>
-            
-            
+
         </StackPanel>
 
 
@@ -50,4 +47,6 @@
         
     </Grid>
 </UserControl>
+
+
 

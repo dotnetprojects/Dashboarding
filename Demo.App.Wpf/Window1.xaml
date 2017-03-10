@@ -1,20 +1,21 @@
 ﻿<Window x:Class="Demo.App.Wpf.Window1"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-     xmlns:cp="clr-namespace:Demos.Common.Util;assembly=Demos.Common"
-    Title="Window1" Height="550" Width="900" Icon="/Demo.App.Wpf;component/app.ico" IsEnabled="True">
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cp="clr-namespace:Demos.Common.Util;assembly=Demos.Common"
+        Title="Window1" Height="550" Width="900" Icon="/Demo.App.Wpf;component/app.ico" IsEnabled="True">
     <Grid>
-        <DockPanel Name="dockPanel1" LastChildFill="True"  >
+        <DockPanel Name="dockPanel1" LastChildFill="True">
             <DockPanel.Background>
                 <LinearGradientBrush EndPoint="0.991,0.979" StartPoint="0.016,0.025">
-                    <GradientStop Color="#FF000000" Offset="0"/>
-                    <GradientStop Color="#FF484545" Offset="1"/>
+                    <GradientStop Color="#FF000000" Offset="0" />
+                    <GradientStop Color="#FF484545" Offset="1" />
                 </LinearGradientBrush>
             </DockPanel.Background>
-            <ListBox DockPanel.Dock="Left" Width="200" x:Name="_select" DisplayMemberPath="DemoName" Background="Transparent" Foreground="BlueViolet"></ListBox>
-            <StackPanel x:Name="_contentPanel"></StackPanel>
+            <ListBox DockPanel.Dock="Left" Width="200" x:Name="_select" DisplayMemberPath="DemoName"
+                     Background="Transparent" Foreground="BlueViolet" />
+            <StackPanel x:Name="_contentPanel" />
         </DockPanel>
 
-        <cp:PopupColorPicker x:Name="_colorPicker"/>
+        <cp:PopupColorPicker x:Name="_colorPicker" />
     </Grid>
 </Window>
