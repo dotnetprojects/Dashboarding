@@ -27,13 +27,14 @@ using System.Reflection;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.0.*")]
+[assembly: AssemblyVersion("0.6.1.0")]
 
-[assembly: AssemblyFileVersion("2.0.*")]                   
+[assembly: AssemblyFileVersion("0.6.1.0")]
+[assembly: AssemblyInformationalVersion("Release 009")]
 
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DotNetProjects")]
-[assembly: AssemblyProduct("DotNetProjects.Dashboarding")]
+[assembly: AssemblyCompany("David black")]
+[assembly: AssemblyProduct("Codeplex.Dashboarding")]
 [assembly: AssemblyCopyright("Copyright © David Black 2008 - 2009")]
 [assembly: AssemblyTrademark("")]
 

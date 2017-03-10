@@ -35,7 +35,7 @@
             </Grid.RowDefinitions>
             <TextBlock Margin="5,0,5,0" Grid.Row="0" Foreground="AntiqueWhite" Text=" Face Text" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextAlignment="Center"  />
 
-            <CheckBox  IsChecked="{Binding Path=FaceTextVisibility, Mode=TwoWay, Converter={StaticResource _convertBoolToVisibility} }"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="FaceTextVisibility" ></CheckBox>
+            <CheckBox  IsChecked="{Binding Path=FaceTextVisibility, Mode=TwoWay, Converter={StaticResource _convertBoolToVisibility} }"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="FaceTextVisibility" />
             <Button Click="_buttonClangeFaceTextColor_Click" Grid.Row="2" HorizontalAlignment="Left" Width="120" Height="24" Margin="10,0,0,0">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Fill="{Binding Path=FaceTextColor, Mode=TwoWay, Converter={StaticResource _convertColorToBrush} }" Width="16" Height="16" Stroke="Black"/>
@@ -61,7 +61,7 @@
             </Grid.RowDefinitions>
             <TextBlock  Margin="5,0,5,0" Grid.Row="0" Foreground="AntiqueWhite" Text="Value Text" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextAlignment="Center"  />
 
-            <CheckBox  IsChecked="{Binding Path=ValueTextVisibility, Mode=TwoWay, Converter={StaticResource _convertBoolToVisibility} }"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="ValueTextVisibility"></CheckBox>
+            <CheckBox  IsChecked="{Binding Path=ValueTextVisibility, Mode=TwoWay, Converter={StaticResource _convertBoolToVisibility} }"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="ValueTextVisibility" />
             <Button Click="_buttonClangeValueTextColor_Click" Grid.Row="2" HorizontalAlignment="Left" Width="120" Height="24" Margin="10,0,0,0">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Fill="{Binding Path=ValueTextColor, Mode=TwoWay, Converter={StaticResource _convertColorToBrush} }" Width="16" Height="16" Stroke="Black"/>
@@ -89,8 +89,8 @@
             </Grid.RowDefinitions>
             <TextBlock  Margin="5,0,5,0" Grid.Row="0" Foreground="AntiqueWhite" Text="Miscellaneous" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextAlignment="Center"  />
 
-            <CheckBox  IsChecked="{Binding Path=IsBidirectional, Mode=TwoWay}"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="IsBidirectional"></CheckBox>
-           
+            <CheckBox  IsChecked="{Binding Path=IsBidirectional, Mode=TwoWay}"  VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Foreground="AntiqueWhite" IsThreeState="False" Content="IsBidirectional" />
+
             <StackPanel Margin="10,0,0,0"  Orientation="Vertical" Grid.Row="2" >
                 <TextBlock Text="Minimum"  Foreground="AntiqueWhite" VerticalAlignment="Top"/>
                 <TextBox Text="{Binding Path=Minimum, Mode=TwoWay}" Width="120"  HorizontalAlignment="Left" />
@@ -119,3 +119,10 @@
         </StackPanel>
     </Grid>
 </UserControl>
+
+
+
+
+
+
+

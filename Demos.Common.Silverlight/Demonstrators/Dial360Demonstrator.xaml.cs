@@ -47,40 +47,40 @@ namespace Demos.Common.Demonstrators
  
         <TextBlock Grid.Row="1" Grid.Column="1" Foreground="AntiqueWhite">Should show a changed text color of yellow and a face color range</TextBlock>
 
-        <db:Dial360 Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial1" Grid.Row="2" ValueTextVisibility="Collapsed">
-            <db:Dial360.NeedleColorRange>
-                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
-                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
-                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+        <dashboarding:Dial360 Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial1" Grid.Row="2" ValueTextVisibility="Collapsed">
+            <dashboarding:Dial360.NeedleColorRange>
+                <dashboarding:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <dashboarding:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <dashboarding:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
             </db:Dial360.NeedleColorRange>
         </db:Dial360>
 
         <TextBlock Grid.Row="2" Grid.Column="1" Foreground="AntiqueWhite">Should show no text and a needle color range</TextBlock>
 
-        <db:Dial360 Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial2" Grid.Row="3">
-            <db:Dial360.FaceColorRange>
-                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
-                <db:ColorPoint HiColor="#2A242C" LowColor="#220000" Value="55" />
+        <dashboarding:Dial360 Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial2" Grid.Row="3">
+            <dashboarding:Dial360.FaceColorRange>
+                <dashboarding:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
+                <dashboarding:ColorPoint HiColor="#2A242C" LowColor="#220000" Value="55" />
             </db:Dial360.FaceColorRange>
-            <db:Dial360.NeedleColorRange>
-                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
-                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
-                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+            <dashboarding:Dial360.NeedleColorRange>
+                <dashboarding:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <dashboarding:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <dashboarding:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
             </db:Dial360.NeedleColorRange>
         </db:Dial360>
 
         <TextBlock Grid.Row="3" Grid.Column="1" Foreground="AntiqueWhite">Should show default text and both a needle and face color range</TextBlock>
 
 
-        <db:Dial360 IsBidirectional="True" Value="{Binding Path=CurrentValue, Mode=TwoWay}"  Grid.Row="4">
-            <db:Dial360.FaceColorRange>
-                <db:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
-                <db:ColorPoint HiColor="#2A242C" LowColor="#220000" Value="55" />
+        <dashboarding:Dial360 IsBidirectional="True" Value="{Binding Path=CurrentValue, Mode=TwoWay}"  Grid.Row="4">
+            <dashboarding:Dial360.FaceColorRange>
+                <dashboarding:ColorPoint HiColor="#2A242C" LowColor="#6C0680" Value="0" />
+                <dashboarding:ColorPoint HiColor="#2A242C" LowColor="#220000" Value="55" />
             </db:Dial360.FaceColorRange>
-            <db:Dial360.NeedleColorRange>
-                <db:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
-                <db:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
-                <db:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
+            <dashboarding:Dial360.NeedleColorRange>
+                <dashboarding:ColorPoint HiColor="#009900" LowColor="#44DD00" Value="0" />
+                <dashboarding:ColorPoint HiColor="#9DC800" LowColor="#DDCC00" Value="33" />
+                <dashboarding:ColorPoint HiColor="#660000" LowColor="#BB3300" Value="66" />
             </db:Dial360.NeedleColorRange>
         </db:Dial360>
 

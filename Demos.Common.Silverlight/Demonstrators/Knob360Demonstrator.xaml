@@ -1,8 +1,10 @@
 ﻿<UserControl x:Class="Demos.Common.Demonstrators.Knob360Demonstrator"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
-    xmlns:bd="clr-namespace:Demos.Common.Demonstrators" Height="433.16" Width="Auto">
+    
+    xmlns:bd="clr-namespace:Demos.Common.Demonstrators"
+    xmlns:dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
+    Height="433.16" Width="Auto">
 
     <Grid x:Name="LayoutRoot" >
         <Grid.RowDefinitions>
@@ -17,7 +19,7 @@
 
         <Rectangle RadiusX="10" RadiusY="10" Fill="Black"/>
         <StackPanel Orientation="Vertical">
-            <db:Knob360  Grid.Row="1" 
+            <dashboarding:Knob360  Grid.Row="1" 
            FaceTextVisibility="{Binding Path=FaceTextVisibility}"
             FaceTextColor="{Binding Path=FaceTextColor}"                     
             FaceTextFormat="{Binding Path=FaceTextFormat}"                     
@@ -33,11 +35,7 @@
             Maximum="{Binding Path=Maximum}"     
             AnimationDuration="{Binding Path=AnimationDuration}"
               
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                              
-                     >
-
-            </db:Knob360>
+            Value="{Binding CurrentValue, Mode=TwoWay}" />
 
 
         </StackPanel>
@@ -49,3 +47,6 @@
 
     </Grid>
 </UserControl>
+
+
+

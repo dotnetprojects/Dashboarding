@@ -1,7 +1,7 @@
 ﻿<demo:SingleGauge x:Class="SilverlightApplication.SingleGuages.dec.DecadeBorderColor"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-                    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"             
+                    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"             
 
 xmlns:demo="clr-namespace:SilverlightApplication.SingleGuages"
 

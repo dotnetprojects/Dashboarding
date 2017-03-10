@@ -1,32 +1,34 @@
 ﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="Demos.Common.Demonstrators.AllControlsDemonstrator"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
+    x:Class="Demos.Common.Demonstrators.AllControlsDemonstrator"
     mc:Ignorable="d"
     >
     <Canvas Height="480"  Width="720">
-        <db:Dial180West  Value="{Binding CurrentValue, Mode=TwoWay}" Mark="Square" Canvas.Left="388" Canvas.Top="67">
-            <db:Dial180West.Effect>
-                <DropShadowEffect/>
-            </db:Dial180West.Effect>
-        </db:Dial180West>
-        <db:Dial180East  Value="{Binding CurrentValue, Mode=TwoWay}" Margin="0"  Canvas.Left="489" Canvas.Top="67">
-            <db:Dial180East.Effect>
-                <DropShadowEffect/>
-            </db:Dial180East.Effect>
-        </db:Dial180East>
+		<dashboarding:Dial180West  Value="{Binding CurrentValue, Mode=TwoWay}" Mark="Square" Canvas.Left="388" Canvas.Top="67">
+			<dashboarding:Dial180West.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial180West.Effect>
+		</dashboarding:Dial180West>
+		<dashboarding:Dial180East  Value="{Binding CurrentValue, Mode=TwoWay}" Margin="0"  Canvas.Left="489" Canvas.Top="67">
+			<dashboarding:Dial180East.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial180East.Effect>
+		</dashboarding:Dial180East>
 
-        <StackPanel Orientation="Horizontal" Canvas.Left="509" Canvas.Top="422">
-            <db:SixteenSegmentLED x:Name="_sH1" DisplayCharacter="D" Margin="5,0,0,0" />
-            <db:SixteenSegmentLED x:Name="_sH2" DisplayCharacter="a" Margin="5,0,0,0"/>
-            <db:SixteenSegmentLED x:Name="_sM1" DisplayCharacter="s" Margin="15,0,0,0"/>
-            <db:SixteenSegmentLED x:Name="_sM2" DisplayCharacter="h" Margin="5,0,0,0"/>
-        </StackPanel>
+		<StackPanel Orientation="Horizontal" Canvas.Left="509" Canvas.Top="422">
+			<dashboarding:SixteenSegmentLED x:Name="_sH1" DisplayCharacter="D" Margin="5,0,0,0" />
+			<dashboarding:SixteenSegmentLED x:Name="_sH2" DisplayCharacter="a" Margin="5,0,0,0"/>
+			<dashboarding:SixteenSegmentLED x:Name="_sM1" DisplayCharacter="s" Margin="15,0,0,0"/>
+			<dashboarding:SixteenSegmentLED x:Name="_sM2" DisplayCharacter="h" Margin="5,0,0,0"/>
+		</StackPanel>
 
 
 
-        <db:MatrixLedMarquee VerticalAlignment="Top" HorizontalAlignment="Left"
+		<dashboarding:MatrixLedMarquee VerticalAlignment="Top" HorizontalAlignment="Left"
 			Panels="14" 
 			TimerDuration="00:00:0.08"
 
@@ -34,119 +36,134 @@
 			Text="Welcome to the Silverlight _and_ WPF Dashboard and gauges project. This MatrixLedMarquee control is one of many in the growing library hosted at Codeplex." Canvas.Left="360" Canvas.Top="484"
         />
 
-        <db:Odometer x:Name="_odometer"  Digits="4" MeterMode="Static"  InitialValue="3141" VerticalAlignment="Top" Canvas.Left="550" Canvas.Top="349" />
-        <db:PerformanceMonitor Height="50" Width="150" x:Name="_mon"  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="336" Canvas.Top="422"/>
+		<dashboarding:Odometer x:Name="_odometer"  Digits="4" MeterMode="Static"  InitialValue="3141" VerticalAlignment="Top" Canvas.Left="550" Canvas.Top="349" />
+		<dashboarding:PerformanceMonitor Height="50" Width="150" x:Name="_mon"  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="336" Canvas.Top="422"/>
 
-        <db:Dial90NorthWest Value="{Binding CurrentValue, Mode=TwoWay}"  Canvas.Top="49" Canvas.Left="8"  >
-            <db:Dial90NorthWest.Effect>
-                <DropShadowEffect/>
-            </db:Dial90NorthWest.Effect>
-        </db:Dial90NorthWest>
-        <db:Dial90NorthEast Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="112" Canvas.Top="49"  >
-            <db:Dial90NorthEast.Effect>
-                <DropShadowEffect/>
-            </db:Dial90NorthEast.Effect>
-        </db:Dial90NorthEast>
-        <db:Dial90SouthWest Value="{Binding CurrentValue, Mode=TwoWay}"  Canvas.Left="8" Canvas.Top="152"  >
-            <db:Dial90SouthWest.Effect>
-                <DropShadowEffect/>
-            </db:Dial90SouthWest.Effect>
-        </db:Dial90SouthWest>
-        <db:Dial90SouthEast  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="112" Canvas.Top="152" >
-            <db:Dial90SouthEast.Effect>
-                <DropShadowEffect/>
-            </db:Dial90SouthEast.Effect>
-        </db:Dial90SouthEast>
+		<dashboarding:Dial90NorthWest Value="{Binding CurrentValue, Mode=TwoWay}"  Canvas.Top="49" Canvas.Left="8"  >
+			<dashboarding:Dial90NorthWest.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90NorthWest.Effect>
+		</dashboarding:Dial90NorthWest>
+		<dashboarding:Dial90NorthEast Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="112" Canvas.Top="49"  >
+			<dashboarding:Dial90NorthEast.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90NorthEast.Effect>
+		</dashboarding:Dial90NorthEast>
+		<dashboarding:Dial90SouthWest Value="{Binding CurrentValue, Mode=TwoWay}"  Canvas.Left="8" Canvas.Top="152"  >
+			<dashboarding:Dial90SouthWest.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90SouthWest.Effect>
+		</dashboarding:Dial90SouthWest>
+		<dashboarding:Dial90SouthEast  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="112" Canvas.Top="152" >
+			<dashboarding:Dial90SouthEast.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90SouthEast.Effect>
+		</dashboarding:Dial90SouthEast>
 
-        <db:Dial90North  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="38" Canvas.Top="268" >
-            <db:Dial90North.Effect>
-                <DropShadowEffect/>
-            </db:Dial90North.Effect>
-        </db:Dial90North>
+		<dashboarding:Dial90North  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="38" Canvas.Top="268" >
+			<dashboarding:Dial90North.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90North.Effect>
+		</dashboarding:Dial90North>
 
-        <db:Dial90South  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="161" Canvas.Top="268" >
-            <db:Dial90South.Effect>
-                <DropShadowEffect/>
-            </db:Dial90South.Effect>
-        </db:Dial90South>
+		<dashboarding:Dial90South  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="161" Canvas.Top="268" >
+			<dashboarding:Dial90South.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90South.Effect>
+		</dashboarding:Dial90South>
+        
+		<dashboarding:Dial90East  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="434" Canvas.Top="268" >
+			<dashboarding:Dial90East.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90East.Effect>
+		</dashboarding:Dial90East>
+		
+		<dashboarding:Dial90West  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Top="268" Canvas.Left="330" >
+			<dashboarding:Dial90West.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial90West.Effect>
+		</dashboarding:Dial90West>
+		        
+		<StackPanel  Orientation="Vertical" Canvas.Left="587" Canvas.Top="227">
+			<dashboarding:DiamondSlider  Value="{Binding CurrentValue, Mode=TwoWay}"   >
+				<dashboarding:DiamondSlider.Effect>
+					<DropShadowEffect/>
+				</dashboarding:DiamondSlider.Effect>
+			</dashboarding:DiamondSlider>
+			<dashboarding:FiveStarRanking Value="{Binding CurrentValue, Mode=TwoWay}"  >
+				<dashboarding:FiveStarRanking.Effect>
+					<DropShadowEffect/>
+				</dashboarding:FiveStarRanking.Effect>
+			</dashboarding:FiveStarRanking>
+			<dashboarding:ProgressBar Value="{Binding CurrentValue, Mode=TwoWay}"      >
+				<dashboarding:ProgressBar.Effect>
+					<DropShadowEffect/>
+				</dashboarding:ProgressBar.Effect>
+			</dashboarding:ProgressBar>
+			<StackPanel Orientation="Horizontal">
+				<dashboarding:TickCross Width="24" Height="24"   Value="{Binding CurrentValue, Mode=TwoWay}"  >
+					<dashboarding:TickCross.Effect>
+						<DropShadowEffect/>
+					</dashboarding:TickCross.Effect>
+				</dashboarding:TickCross>
+				<dashboarding:RoundLed Width="24" Height="24"    Value="{Binding CurrentValue, Mode=TwoWay}"  >
+					<dashboarding:RoundLed.Effect>
+						<DropShadowEffect/>
+					</dashboarding:RoundLed.Effect>
+				</dashboarding:RoundLed>
+			</StackPanel>
 
-        <db:Dial90East  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="434" Canvas.Top="268" >
-            <db:Dial90East.Effect>
-                <DropShadowEffect/>
-            </db:Dial90East.Effect>
-        </db:Dial90East>
+		</StackPanel>
 
-        <db:Dial90West  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Top="268" Canvas.Left="330" >
-            <db:Dial90West.Effect>
-                <DropShadowEffect/>
-            </db:Dial90West.Effect>
-        </db:Dial90West>
+		<dashboarding:PlainThermometer Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="608" Canvas.Top="57" >
+			<dashboarding:PlainThermometer.Effect>
+				<DropShadowEffect/>
+			</dashboarding:PlainThermometer.Effect>
+		</dashboarding:PlainThermometer>
+		<dashboarding:WallThermometer  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="638" Canvas.Top="52" >
+			<dashboarding:WallThermometer.Effect>
+				<DropShadowEffect/>
+			</dashboarding:WallThermometer.Effect>
+		</dashboarding:WallThermometer>
 
-        <StackPanel  Orientation="Vertical" Canvas.Left="587" Canvas.Top="227">
-            <db:DiamondSlider  Value="{Binding CurrentValue, Mode=TwoWay}"   >
-                <db:DiamondSlider.Effect>
-                    <DropShadowEffect/>
-                </db:DiamondSlider.Effect>
-            </db:DiamondSlider>
-            <db:FiveStarRanking Value="{Binding CurrentValue, Mode=TwoWay}"  >
-                <db:FiveStarRanking.Effect>
-                    <DropShadowEffect/>
-                </db:FiveStarRanking.Effect>
-            </db:FiveStarRanking>
-            <db:ProgressBar Value="{Binding CurrentValue, Mode=TwoWay}"      >
-                <db:ProgressBar.Effect>
-                    <DropShadowEffect/>
-                </db:ProgressBar.Effect>
-            </db:ProgressBar>
-            <StackPanel Orientation="Horizontal">
-                <db:TickCross Width="24" Height="24"   Value="{Binding CurrentValue, Mode=TwoWay}"  >
-                    <db:TickCross.Effect>
-                        <DropShadowEffect/>
-                    </db:TickCross.Effect>
-                </db:TickCross>
-                <db:RoundLed Width="24" Height="24"    Value="{Binding CurrentValue, Mode=TwoWay}"  >
-                    <db:RoundLed.Effect>
-                        <DropShadowEffect/>
-                    </db:RoundLed.Effect>
-                </db:RoundLed>
-            </StackPanel>
+		<dashboarding:Dial180North Value="{Binding CurrentValue, Mode=TwoWay}" Mark="Round" Canvas.Left="216" Canvas.Top="52" >
+			<dashboarding:Dial180North.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial180North.Effect>
+		</dashboarding:Dial180North>
+		<dashboarding:Dial180South Value="{Binding CurrentValue, Mode=TwoWay}" Mark="Line" Canvas.Top="152" Canvas.Left="216" >
+			<dashboarding:Dial180South.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial180South.Effect>
+		</dashboarding:Dial180South>
 
-        </StackPanel>
+		<dashboarding:Dial360 Value="{Binding CurrentValue, Mode=TwoWay}"    Canvas.Left="8" Canvas.Top="372"    >
+			<dashboarding:Dial360.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Dial360.Effect>
+		</dashboarding:Dial360>
+		<dashboarding:Knob360 Value="{Binding CurrentValue, Mode=TwoWay}"  Canvas.Left="172" Canvas.Top="372"  >
+			<dashboarding:Knob360.Effect>
+				<DropShadowEffect/>
+			</dashboarding:Knob360.Effect>
+		</dashboarding:Knob360>
 
-        <db:PlainThermometer Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="608" Canvas.Top="57" >
-            <db:PlainThermometer.Effect>
-                <DropShadowEffect/>
-            </db:PlainThermometer.Effect>
-        </db:PlainThermometer>
-        <db:WallThermometer  Value="{Binding CurrentValue, Mode=TwoWay}" Canvas.Left="638" Canvas.Top="52" >
-            <db:WallThermometer.Effect>
-                <DropShadowEffect/>
-            </db:WallThermometer.Effect>
-        </db:WallThermometer>
-
-        <db:Dial180North Value="{Binding CurrentValue, Mode=TwoWay}" Mark="Round" Canvas.Left="216" Canvas.Top="52" >
-            <db:Dial180North.Effect>
-                <DropShadowEffect/>
-            </db:Dial180North.Effect>
-        </db:Dial180North>
-        <db:Dial180South Value="{Binding CurrentValue, Mode=TwoWay}" Mark="Line" Canvas.Top="152" Canvas.Left="216" >
-            <db:Dial180South.Effect>
-                <DropShadowEffect/>
-            </db:Dial180South.Effect>
-        </db:Dial180South>
-
-        <db:Dial360 Value="{Binding CurrentValue, Mode=TwoWay}"    Canvas.Left="8" Canvas.Top="372"    >
-            <db:Dial360.Effect>
-                <DropShadowEffect/>
-            </db:Dial360.Effect>
-        </db:Dial360>
-        <db:Knob360 Value="{Binding CurrentValue, Mode=TwoWay}"  Canvas.Left="172" Canvas.Top="372"  >
-            <db:Knob360.Effect>
-                <DropShadowEffect/>
-            </db:Knob360.Effect>
-        </db:Knob360>
-
-        <!-- title -->
-        <TextBlock FontWeight="bold" Foreground="AntiqueWhite" FontSize="24" HorizontalAlignment="Left" Text="All controls, default appearance" Canvas.Top="10" />
-    </Canvas>
+		<!-- title -->
+		<TextBlock FontWeight="bold" Foreground="AntiqueWhite" FontSize="24" HorizontalAlignment="Left" Text="All controls, default appearance" Canvas.Top="10" />
+	</Canvas>
 </UserControl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,85 +1,140 @@
-﻿<UserControl x:Class="Demos.Common.Demonstrators.ProgressbarDemonstrator"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<UserControl
+    x:Class="Demos.Common.Demonstrators.ProgressbarDemonstrator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
-    xmlns:bd="clr-namespace:Demos.Common.Demonstrators" Height="433.16" Width="394.009">
+    xmlns:bd="clr-namespace:Demos.Common.Demonstrators"
+    xmlns:dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
+    Width="394.009"
+    Height="433.16">
 
-    <Grid x:Name="LayoutRoot" >
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
-            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*" />
 
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
         </Grid.ColumnDefinitions>
 
-        <Rectangle RadiusX="10" RadiusY="10" Fill="Black"/>
-        <StackPanel Orientation="Vertical">
-            <db:FiveStarRanking  Grid.Row="1" 
-            FaceTextVisibility="{Binding Path=FaceTextVisibility}"
-            FaceTextColor="{Binding Path=FaceTextColor}"                     
-            FaceTextFormat="{Binding Path=FaceTextFormat}"                     
-                     
-            ValueTextVisibility="{Binding Path=ValueTextVisibility}"
-            ValueTextColor="{Binding Path=ValueTextColor}"                     
-            ValueTextFormat="{Binding Path=ValueTextFormat}"                     
+        <Rectangle
+            Fill="Black"
+            RadiusX="10"
+            RadiusY="10" />
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+            <dashboarding:FiveStarRanking
+                AnimationDuration="{Binding Path=AnimationDuration}"
+                FaceTextColor="{Binding Path=FaceTextColor}"
+                FaceTextFormat="{Binding Path=FaceTextFormat}"
+                FaceTextVisibility="{Binding Path=FaceTextVisibility}"
+                IsBidirectional="{Binding Path=IsBidirectional}"
+                Maximum="{Binding Path=Maximum}"
+                Minimum="{Binding Path=Minimum}"
+                ValueTextColor="{Binding Path=ValueTextColor}"
+                ValueTextFormat="{Binding Path=ValueTextFormat}"
+                ValueTextVisibility="{Binding Path=ValueTextVisibility}"
+                Value="{Binding CurrentValue, Mode=TwoWay}" />
 
-            IsBidirectional="{Binding Path=IsBidirectional}"
-            Minimum="{Binding Path=Minimum}"                     
-            Maximum="{Binding Path=Maximum}"     
-            AnimationDuration="{Binding Path=AnimationDuration}"
-              
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                     >
+            <dashboarding:ProgressBar
+                AnimationDuration="{Binding Path=AnimationDuration}"
+                FaceTextColor="{Binding Path=FaceTextColor}"
+                FaceTextFormat="{Binding Path=FaceTextFormat}"
+                FaceTextVisibility="{Binding Path=FaceTextVisibility}"
+                IsBidirectional="{Binding Path=IsBidirectional}"
+                Maximum="{Binding Path=Maximum}"
+                Minimum="{Binding Path=Minimum}"
+                ValueTextColor="{Binding Path=ValueTextColor}"
+                ValueTextFormat="{Binding Path=ValueTextFormat}"
+                ValueTextVisibility="{Binding Path=ValueTextVisibility}"
+                Value="{Binding CurrentValue, Mode=TwoWay}" />
 
-            </db:FiveStarRanking>
-
-            <db:ProgressBar  Grid.Row="1" 
-            FaceTextVisibility="{Binding Path=FaceTextVisibility}"
-            FaceTextColor="{Binding Path=FaceTextColor}"                     
-            FaceTextFormat="{Binding Path=FaceTextFormat}"                     
-                     
-            ValueTextVisibility="{Binding Path=ValueTextVisibility}"
-            ValueTextColor="{Binding Path=ValueTextColor}"                     
-            ValueTextFormat="{Binding Path=ValueTextFormat}"                     
-
-            IsBidirectional="{Binding Path=IsBidirectional}"
-            Minimum="{Binding Path=Minimum}"                     
-            Maximum="{Binding Path=Maximum}"     
-            AnimationDuration="{Binding Path=AnimationDuration}"
-              
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                     >
-
-            </db:ProgressBar>
-            
-            <db:DiamondSlider  Grid.Row="1" 
-            FaceTextVisibility="{Binding Path=FaceTextVisibility}"
-            FaceTextColor="{Binding Path=FaceTextColor}"                     
-            FaceTextFormat="{Binding Path=FaceTextFormat}"                     
-                     
-            ValueTextVisibility="{Binding Path=ValueTextVisibility}"
-            ValueTextColor="{Binding Path=ValueTextColor}"                     
-            ValueTextFormat="{Binding Path=ValueTextFormat}"                     
-
-            IsBidirectional="{Binding Path=IsBidirectional}"
-            Minimum="{Binding Path=Minimum}"                     
-            Maximum="{Binding Path=Maximum}"     
-            AnimationDuration="{Binding Path=AnimationDuration}"
-              
-            Value="{Binding CurrentValue, Mode=TwoWay}"
-                     >
-
-            </db:DiamondSlider>
+            <dashboarding:DiamondSlider
+                AnimationDuration="{Binding Path=AnimationDuration}"
+                FaceTextColor="{Binding Path=FaceTextColor}"
+                FaceTextFormat="{Binding Path=FaceTextFormat}"
+                FaceTextVisibility="{Binding Path=FaceTextVisibility}"
+                IsBidirectional="{Binding Path=IsBidirectional}"
+                Maximum="{Binding Path=Maximum}"
+                Minimum="{Binding Path=Minimum}"
+                ValueTextColor="{Binding Path=ValueTextColor}"
+                ValueTextFormat="{Binding Path=ValueTextFormat}"
+                ValueTextVisibility="{Binding Path=ValueTextVisibility}"
+                Value="{Binding CurrentValue, Mode=TwoWay}" />
 
         </StackPanel>
 
 
 
 
-        <bd:Experimenter Margin="10,0,0,0" x:Name="_exp" Grid.Row="1" Grid.Column="1"/>
+        <bd:Experimenter
+            x:Name="Exp"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="10,0,0,0" />
 
     </Grid>
 </UserControl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

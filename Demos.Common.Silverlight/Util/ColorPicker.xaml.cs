@@ -1,5 +1,4 @@
-﻿
-/* •——————————————————————————————————————————————————————————————————————————————————————————•
+﻿/* •——————————————————————————————————————————————————————————————————————————————————————————•
    | This really useful color picker was sourced from the blog:                               |
    |    Matthias Shapiro’s WPF & Silverlight Blog - Because Developers Get All The Good Blogs |
    |    at: http://www.designerwpf.com/category/colorpicker/                                  |
@@ -8,42 +7,43 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+using System.Diagnostics.CodeAnalysis;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 
 namespace Demos.Common.Util
 {
-    public partial class ColorPicker : UserControl
+    [SuppressMessage("ReSharper", "UnusedMember.Local")]
+    public partial class ColorPicker 
     {
-        private bool isMouseDownOnCanvas;
-        private bool isMouseDownOnRainbow;
-        private double colorCanvasXProperty;
-        private double colorCanvasYProperty;
-        private SolidColorBrush baseHueProperty;
-        private bool isCompactProperty;
+        private SolidColorBrush _baseHueProperty;
+        private double _colorCanvasXProperty;
+        private double _colorCanvasYProperty;
+        private bool _isCompactProperty;
+        private bool _isMouseDownOnCanvas;
+        private bool _isMouseDownOnRainbow;
 
-        private SolidColorBrush selectedColorProperty;
-
+        private SolidColorBrush _selectedColorProperty;
 
 
         public ColorPicker()
         {
             InitializeComponent();
 
-            colorCanvasXProperty = 1;
+            _colorCanvasXProperty = 1;
             ColorCanvasY = 1;
-            isMouseDownOnCanvas = false;
-            this.UpdateLayout();
+            _isMouseDownOnCanvas = false;
+            UpdateLayout();
             if (RainbowBorder.ActualWidth > 1)
                 RainbowHandle.Width = RainbowBorder.ActualWidth - 1;
+        }
+
+        private void TurnEverythingOff(object sender, MouseButtonEventArgs e)
+        {
+            _isMouseDownOnRainbow = false;
+            _isMouseDownOnCanvas = false;
         }
 
         #region ColorChanged Event code
@@ -58,55 +58,53 @@ namespace Demos.Common.Util
 
         protected virtual void OnColorChanged(ColorChangedEventArgs e)
         {
-            if (ColorChangedEvent != null)
-            {
-                ColorChangedEvent(this, e);
-            }
+            ColorChangedEvent?.Invoke(this, e);
         }
+
         #endregion
 
         #region Dependency Properties
 
         private double ColorCanvasX
         {
-            get { return colorCanvasXProperty; }
+            get { return _colorCanvasXProperty; }
             set
             {
-                colorCanvasXProperty = value;
+                _colorCanvasXProperty = value;
                 UpdateSelectedColor();
             }
         }
 
         private double ColorCanvasY
         {
-            get { return colorCanvasYProperty; }
+            get { return _colorCanvasYProperty; }
             set
             {
-                colorCanvasYProperty = value;
+                _colorCanvasYProperty = value;
                 UpdateSelectedColor();
             }
         }
 
         internal SolidColorBrush BaseHue
         {
-            get { return baseHueProperty; }
+            get { return _baseHueProperty; }
             set
             {
-                baseHueProperty = value;
+                _baseHueProperty = value;
                 UpdateSelectedColor();
                 if (BackgroundCanvas != null)
                 {
-                    BackgroundCanvas.Background = baseHueProperty;
+                    BackgroundCanvas.Background = _baseHueProperty;
                 }
             }
         }
 
         public bool IsCompact
         {
-            get { return isCompactProperty; }
+            get { return _isCompactProperty; }
             set
             {
-                isCompactProperty = value;
+                _isCompactProperty = value;
                 if (LayoutRoot != null)
                 {
                     CompactLayoutChange(value);
@@ -116,14 +114,14 @@ namespace Demos.Common.Util
 
         private void CompactLayoutChange(bool compactChange)
         {
-            Point oldColorPosition = new Point(Canvas.GetLeft(FinalColor),
-                                                Canvas.GetTop(FinalColor));
-            Point oldHuePosition = new Point(0.0,
-                                                Canvas.GetTop(RainbowHandle));
-            Size oldColorCanvasSize = new Size(this.ColorCanvas.ActualWidth,
-                                                this.ColorCanvas.ActualHeight);
-            Size oldHueCanvasSize = new Size(this.HueCanvas.ActualWidth,
-                                                this.HueCanvas.ActualHeight);
+            var oldColorPosition = new Point(Canvas.GetLeft(FinalColor),
+                Canvas.GetTop(FinalColor));
+            var oldHuePosition = new Point(0.0,
+                Canvas.GetTop(RainbowHandle));
+            var oldColorCanvasSize = new Size(ColorCanvas.ActualWidth,
+                ColorCanvas.ActualHeight);
+            var oldHueCanvasSize = new Size(HueCanvas.ActualWidth,
+                HueCanvas.ActualHeight);
 
             if (compactChange)
             {
@@ -145,50 +143,48 @@ namespace Demos.Common.Util
                 RootControl.MinHeight = 190;
                 RootControl.MinWidth = 240;
             }
-            this.UpdateLayout();
+            UpdateLayout();
 
             RealignElement(oldColorPosition,
-                            oldColorCanvasSize,
-                            new Size(this.ColorCanvas.ActualWidth, this.ColorCanvas.ActualHeight),
-                            (UIElement)this.FinalColor);
+                oldColorCanvasSize,
+                new Size(ColorCanvas.ActualWidth, ColorCanvas.ActualHeight),
+                FinalColor);
             RealignElement(oldHuePosition,
-                            oldHueCanvasSize,
-                            new Size(this.HueCanvas.ActualWidth, this.HueCanvas.ActualHeight),
-                            (UIElement)this.RainbowHandle);
+                oldHueCanvasSize,
+                new Size(HueCanvas.ActualWidth, HueCanvas.ActualHeight),
+                RainbowHandle);
 
             if (RainbowBorder.ActualWidth > 1)
                 RainbowHandle.Width = RainbowBorder.ActualWidth - 1;
-
         }
 
         private void RealignElement(Point oldPosition,
-                                    Size oldCanvasSize,
-                                    Size newCanvasSize,
-                                    UIElement elementToRealign)
+            Size oldCanvasSize,
+            Size newCanvasSize,
+            UIElement elementToRealign)
         {
             //OK... so we find the old size and the old position, turn them into a
             // percentage an apply the new position based on the new size
-            if ((oldCanvasSize.Width != 0) && (oldCanvasSize.Height != 0))
+            if ((Math.Abs(oldCanvasSize.Width) > 0.01) && (Math.Abs(oldCanvasSize.Height) > 0.01))
             {
+                var relativeX = oldPosition.X/oldCanvasSize.Width;
+                var relativeY = oldPosition.Y/oldCanvasSize.Height;
 
-                double relativeX = oldPosition.X / oldCanvasSize.Width;
-                double relativeY = oldPosition.Y / oldCanvasSize.Height;
-
-                Canvas.SetLeft(elementToRealign, (newCanvasSize.Width * relativeX));
-                Canvas.SetTop(elementToRealign, (newCanvasSize.Height * relativeY));
+                Canvas.SetLeft(elementToRealign, newCanvasSize.Width*relativeX);
+                Canvas.SetTop(elementToRealign, newCanvasSize.Height*relativeY);
             }
         }
 
         public SolidColorBrush SelectedColor
         {
-            get { return selectedColorProperty; }
+            get { return _selectedColorProperty; }
             set
             {
-                selectedColorProperty = value;
+                _selectedColorProperty = value;
 
                 if (resultCanvas != null)
                 {
-                    resultCanvas.Background = selectedColorProperty;
+                    resultCanvas.Background = _selectedColorProperty;
                 }
             }
         }
@@ -196,52 +192,56 @@ namespace Demos.Common.Util
         #endregion
 
         #region Update Color methods
+
         protected void UpdateSelectedColor()
         {
-            if (baseHueProperty == null)
+            if (_baseHueProperty == null)
             {
                 UpdateColorCanvas(150, 0);
             }
 
-            Color baseColor = ((System.Windows.Media.SolidColorBrush)(baseHueProperty)).Color;
-
-            Color newColor = new Color();
-            if (colorCanvasXProperty > 1.0)
+            if (_baseHueProperty != null)
             {
-                colorCanvasXProperty = 1.0;
-            }
+                var baseColor = _baseHueProperty.Color;
 
-            if (colorCanvasYProperty > 1.0)
-            {
-                colorCanvasYProperty = 1.0;
-            }
+                var newColor = new Color();
+                if (_colorCanvasXProperty > 1.0)
+                {
+                    _colorCanvasXProperty = 1.0;
+                }
 
-            newColor.R = System.Convert.ToByte(colorCanvasYProperty * (baseColor.R + ((255 - baseColor.R) * colorCanvasXProperty)));
-            newColor.G = System.Convert.ToByte(colorCanvasYProperty * (baseColor.G + ((255 - baseColor.G) * colorCanvasXProperty)));
-            newColor.B = System.Convert.ToByte(colorCanvasYProperty * (baseColor.B + ((255 - baseColor.B) * colorCanvasXProperty)));
+                if (_colorCanvasYProperty > 1.0)
+                {
+                    _colorCanvasYProperty = 1.0;
+                }
 
-            newColor.A = 255;
+                newColor.R = Convert.ToByte(_colorCanvasYProperty*(baseColor.R + (255 - baseColor.R)*_colorCanvasXProperty));
+                newColor.G = Convert.ToByte(_colorCanvasYProperty*(baseColor.G + (255 - baseColor.G)*_colorCanvasXProperty));
+                newColor.B = Convert.ToByte(_colorCanvasYProperty*(baseColor.B + (255 - baseColor.B)*_colorCanvasXProperty));
 
-            SolidColorBrush updatedColor = new SolidColorBrush(newColor);
+                newColor.A = 255;
 
-            OnColorChanged(new ColorChangedEventArgs(SelectedColor, updatedColor));
+                var updatedColor = new SolidColorBrush(newColor);
 
-            SelectedColor = new SolidColorBrush(newColor);
+                OnColorChanged(new ColorChangedEventArgs(SelectedColor, updatedColor));
 
-            if (CopyColorText != null)
-            {
-                RedText.Text = newColor.R.ToString();
-                GreenText.Text = newColor.G.ToString();
-                BlueText.Text = newColor.B.ToString();
-                CopyColorText.Text = CompactRGBText.Text = "" + newColor.R.ToString() + "," + newColor.G.ToString() + "," + newColor.B.ToString();
-                CopyHexText.Text = CompactHexText.Text = newColor.ToString();
+                SelectedColor = new SolidColorBrush(newColor);
+
+                if (CopyColorText != null)
+                {
+                    RedText.Text = newColor.R.ToString();
+                    GreenText.Text = newColor.G.ToString();
+                    BlueText.Text = newColor.B.ToString();
+                    CopyColorText.Text = CompactRGBText.Text = "" + newColor.R + "," + newColor.G + "," + newColor.B;
+                    CopyHexText.Text = CompactHexText.Text = newColor.ToString();
+                }
             }
         }
 
         //private void UpdateColorCanvas(object sender, RoutedEventArgs e)
         private void UpdateColorCanvas(double max, double position)
         {
-            Color targetColor = new Color();
+            var targetColor = new Color();
 
             if (position > max)
                 position = max;
@@ -260,39 +260,25 @@ namespace Demos.Common.Util
 
         private byte GetRedValue(double range, double value)
         {
-            double percentage = value / range;
-            int redValue = 0;
+            var percentage = value/range;
+            var redValue = 0;
 
             if (percentage <= .3333)
             {
-                if (percentage <= .16666)
-                {
-                    redValue = 255;
-                }
-                else
-                {
-                    redValue = System.Convert.ToInt32(255 * (Math.Abs(.3333 - percentage) / .16666));
-                }
+                redValue = percentage <= .16666 ? 255 : Convert.ToInt32(255*(Math.Abs(.3333 - percentage)/.16666));
             }
             else if (percentage >= .66666)
             {
-                if (percentage >= .83333)
-                {
-                    redValue = 255;
-                }
-                else
-                {
-                    redValue = System.Convert.ToInt32(255 * (Math.Abs(percentage - .6666) / .16666));
-                }
+                redValue = percentage >= .83333 ? 255 : Convert.ToInt32(255*(Math.Abs(percentage - .6666)/.16666));
             }
 
-            return System.Convert.ToByte(redValue);
+            return Convert.ToByte(redValue);
         }
 
         private byte GetBlueValue(double range, double value)
         {
-            double percentage = value / range;
-            int blueValue = 0;
+            var percentage = value/range;
+            var blueValue = 0;
 
             if (percentage >= .66666)
             {
@@ -300,7 +286,7 @@ namespace Demos.Common.Util
             }
             else if (percentage <= .16666)
             {
-                blueValue = System.Convert.ToInt32(255 * (Math.Abs(percentage) / .16666));
+                blueValue = Convert.ToInt32(255*(Math.Abs(percentage)/.16666));
             }
             else if (percentage <= .5)
             {
@@ -308,16 +294,16 @@ namespace Demos.Common.Util
             }
             else if (percentage >= .5)
             {
-                blueValue = System.Convert.ToInt32(255 * (Math.Abs(.66666 - percentage) / .16666));
+                blueValue = Convert.ToInt32(255*(Math.Abs(.66666 - percentage)/.16666));
             }
 
-            return System.Convert.ToByte(blueValue);
+            return Convert.ToByte(blueValue);
         }
 
         private byte GetGreenValue(double range, double value)
         {
-            double percentage = value / range;
-            int greenValue = 0;
+            var percentage = value/range;
+            var greenValue = 0;
 
             if (percentage <= .3333)
             {
@@ -325,7 +311,7 @@ namespace Demos.Common.Util
             }
             else if (percentage >= .8333)
             {
-                greenValue = System.Convert.ToInt32(255 * (Math.Abs(1 - percentage) / .16666));
+                greenValue = Convert.ToInt32(255*(Math.Abs(1 - percentage)/.16666));
             }
             else if (percentage >= .5)
             {
@@ -333,10 +319,10 @@ namespace Demos.Common.Util
             }
             else if (percentage <= .5)
             {
-                greenValue = System.Convert.ToInt32(255 * (Math.Abs(.3333 - percentage) / .16666));
+                greenValue = Convert.ToInt32(255*(Math.Abs(.3333 - percentage)/.16666));
             }
 
-            return System.Convert.ToByte(greenValue);
+            return Convert.ToByte(greenValue);
         }
 
         #endregion
@@ -345,75 +331,82 @@ namespace Demos.Common.Util
 
         private void Canvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            isMouseDownOnCanvas = false;
+            _isMouseDownOnCanvas = false;
         }
 
         private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             //Let the dragging issue begin
-            isMouseDownOnCanvas = true;
-            Canvas backgroundCanvas = sender as Canvas;
+            _isMouseDownOnCanvas = true;
+            var backgroundCanvas = sender as Canvas;
 
             //move the little circular canvas thingy
-            Point newGridPoint = e.GetPosition(backgroundCanvas);
-            Canvas.SetTop(this.FinalColor, (newGridPoint.Y - 6));
-            Canvas.SetLeft(this.FinalColor, (newGridPoint.X - 6));
+            var newGridPoint = e.GetPosition(backgroundCanvas);
+            Canvas.SetTop(FinalColor, newGridPoint.Y - 6);
+            Canvas.SetLeft(FinalColor, newGridPoint.X - 6);
 
             //Set the new Brush
-            colorCanvasXProperty = (Math.Abs(backgroundCanvas.ActualWidth - newGridPoint.X)) / backgroundCanvas.ActualWidth;
-            ColorCanvasY = (Math.Abs(newGridPoint.Y - backgroundCanvas.ActualHeight)) / backgroundCanvas.ActualHeight;
+            if (backgroundCanvas != null)
+            {
+                _colorCanvasXProperty = Math.Abs(backgroundCanvas.ActualWidth - newGridPoint.X)/backgroundCanvas.ActualWidth;
+                ColorCanvasY = Math.Abs(newGridPoint.Y - backgroundCanvas.ActualHeight)/backgroundCanvas.ActualHeight;
+            }
         }
 
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isMouseDownOnCanvas)
+            if (_isMouseDownOnCanvas)
             {
-                Canvas backgroundCanvas = sender as Canvas;
+                var backgroundCanvas = sender as Canvas;
 
-                Point newGridPoint = e.GetPosition(backgroundCanvas);
-                Canvas.SetTop(this.FinalColor, (newGridPoint.Y - 6));
-                Canvas.SetLeft(this.FinalColor, (newGridPoint.X - 6));
+                var newGridPoint = e.GetPosition(backgroundCanvas);
+                Canvas.SetTop(FinalColor, newGridPoint.Y - 6);
+                Canvas.SetLeft(FinalColor, newGridPoint.X - 6);
 
                 //Set the new Brush
-                colorCanvasXProperty = (Math.Abs(backgroundCanvas.ActualWidth - newGridPoint.X)) / backgroundCanvas.ActualWidth;
-                ColorCanvasY = (Math.Abs(newGridPoint.Y - backgroundCanvas.ActualHeight)) / backgroundCanvas.ActualHeight;
+                if (backgroundCanvas != null)
+                {
+                    _colorCanvasXProperty = Math.Abs(backgroundCanvas.ActualWidth - newGridPoint.X)/
+                                            backgroundCanvas.ActualWidth;
+                    ColorCanvasY = Math.Abs(newGridPoint.Y - backgroundCanvas.ActualHeight)/backgroundCanvas.ActualHeight;
+                }
             }
         }
 
         private void Canvas_MouseLeave(object sender, MouseEventArgs e)
         {
             //find out which side the mouse left
-            if (isMouseDownOnCanvas)
+            if (_isMouseDownOnCanvas)
             {
-                if ((colorCanvasXProperty - 1) > -.1)
+                if (_colorCanvasXProperty - 1 > -.1)
                 {
-                    colorCanvasXProperty = 1;
+                    _colorCanvasXProperty = 1;
                 }
-                else if ((colorCanvasXProperty - .1) < 0)
+                else if (_colorCanvasXProperty - .1 < 0)
                 {
-                    colorCanvasXProperty = 0;
-                }
-
-                if ((colorCanvasYProperty - 1) > -.1)
-                {
-                    colorCanvasYProperty = 1;
-                }
-                else if ((colorCanvasYProperty - .1) < 0)
-                {
-                    colorCanvasYProperty = 0;
+                    _colorCanvasXProperty = 0;
                 }
 
-                ColorCanvasY = colorCanvasYProperty;
+                if (_colorCanvasYProperty - 1 > -.1)
+                {
+                    _colorCanvasYProperty = 1;
+                }
+                else if (_colorCanvasYProperty - .1 < 0)
+                {
+                    _colorCanvasYProperty = 0;
+                }
+
+                ColorCanvasY = _colorCanvasYProperty;
             }
         }
 
         private void ColorCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             RealignElement(new Point(Canvas.GetLeft(FinalColor),
-                                     Canvas.GetTop(FinalColor)),
-                         e.PreviousSize,
-                         e.NewSize,
-                         (UIElement)FinalColor);
+                Canvas.GetTop(FinalColor)),
+                e.PreviousSize,
+                e.NewSize,
+                FinalColor);
         }
 
         #endregion
@@ -422,31 +415,30 @@ namespace Demos.Common.Util
 
         private void RainbowBorder_TurnOn(object sender, MouseButtonEventArgs e)
         {
-            isMouseDownOnRainbow = true;
+            _isMouseDownOnRainbow = true;
 
-            FrameworkElement thisRainbowBorder = (FrameworkElement)sender;
-            Point mousePosInRainbow = e.GetPosition(thisRainbowBorder);
-            UpdateColorCanvas(thisRainbowBorder.ActualHeight, (thisRainbowBorder.ActualHeight - mousePosInRainbow.Y));
-            Canvas.SetTop(this.RainbowHandle, (mousePosInRainbow.Y - (this.RainbowHandle.ActualHeight / 2)));
-
+            var thisRainbowBorder = (FrameworkElement) sender;
+            var mousePosInRainbow = e.GetPosition(thisRainbowBorder);
+            UpdateColorCanvas(thisRainbowBorder.ActualHeight, thisRainbowBorder.ActualHeight - mousePosInRainbow.Y);
+            Canvas.SetTop(RainbowHandle, mousePosInRainbow.Y - RainbowHandle.ActualHeight/2);
         }
 
         private void RainbowBorder_TurnOff(object sender, MouseButtonEventArgs e)
         {
-            isMouseDownOnRainbow = false;
-
+            _isMouseDownOnRainbow = false;
         }
 
         private void RainbowBorder_UpdateHue(object sender, MouseEventArgs e)
         {
-            if (isMouseDownOnRainbow)
+            if (_isMouseDownOnRainbow)
             {
-                FrameworkElement thisRainbowBorder = (FrameworkElement)sender;
-                Point mousePosInRainbow = e.GetPosition(thisRainbowBorder);
-                if ((mousePosInRainbow.Y < this.RainbowBorder.ActualHeight) && (mousePosInRainbow.Y > 0))
+                var thisRainbowBorder = (FrameworkElement) sender;
+                var mousePosInRainbow = e.GetPosition(thisRainbowBorder);
+                if ((mousePosInRainbow.Y < RainbowBorder.ActualHeight) && (mousePosInRainbow.Y > 0))
                 {
-                    UpdateColorCanvas(thisRainbowBorder.ActualHeight, (thisRainbowBorder.ActualHeight - mousePosInRainbow.Y));
-                    Canvas.SetTop(this.RainbowHandle, (mousePosInRainbow.Y - (this.RainbowHandle.ActualHeight / 2)));
+                    UpdateColorCanvas(thisRainbowBorder.ActualHeight,
+                        thisRainbowBorder.ActualHeight - mousePosInRainbow.Y);
+                    Canvas.SetTop(RainbowHandle, mousePosInRainbow.Y - RainbowHandle.ActualHeight/2);
                 }
             }
         }
@@ -454,10 +446,10 @@ namespace Demos.Common.Util
         private void HueCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             RealignElement(new Point(0.0,
-                                     Canvas.GetTop(RainbowHandle)),
-                         e.PreviousSize,
-                         e.NewSize,
-                         (UIElement)RainbowHandle);
+                Canvas.GetTop(RainbowHandle)),
+                e.PreviousSize,
+                e.NewSize,
+                RainbowHandle);
 
             if (RainbowBorder.ActualWidth > 1)
                 RainbowHandle.Width = RainbowBorder.ActualWidth - 1;
@@ -472,25 +464,12 @@ namespace Demos.Common.Util
             }
             else
             {
-                RainbowHandle.Height = e.NewSize.Height / 10;
+                RainbowHandle.Height = e.NewSize.Height/10;
             }
-
         }
 
         #endregion
-
-        private void TurnEverythingOff(object sender, MouseButtonEventArgs e)
-        {
-            isMouseDownOnRainbow = false;
-            isMouseDownOnCanvas = false;
-        }
-
-
     }
-
-
-
-
 
     #region ColorChangedEvent stuff
 
@@ -498,34 +477,31 @@ namespace Demos.Common.Util
 
     public class ColorChangedEventArgs : EventArgs
     {
-        public ColorChangedEventArgs(SolidColorBrush oldColor, SolidColorBrush newColor)
-        {
-            this.oldColor = oldColor;
-            this.newColor = newColor;
-        }
+        public SolidColorBrush NewColor;
 
         // The fire event will have two pieces of information--
         // 1) Where the fire is, and 2) how "ferocious" it is.
 
-        public SolidColorBrush oldColor;
-        public SolidColorBrush newColor;
+        public SolidColorBrush OldColor;
 
+        public ColorChangedEventArgs(SolidColorBrush oldColor, SolidColorBrush newColor)
+        {
+            OldColor = oldColor;
+            NewColor = newColor;
+        }
     }
+
     #endregion
 
     #region ClickTextBox class
 
     public class ClickTextBox : TextBox
     {
-        public ClickTextBox()
-        {
-
-        }
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
             e.Handled = false;
-            this.SelectAll();
+            SelectAll();
         }
 
         protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e)
@@ -534,5 +510,6 @@ namespace Demos.Common.Util
             e.Handled = false;
         }
     }
+
     #endregion    }
 }
