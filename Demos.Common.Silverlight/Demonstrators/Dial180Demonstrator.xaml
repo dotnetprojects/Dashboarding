@@ -1,8 +1,10 @@
 ﻿<UserControl x:Class="Demos.Common.Demonstrators.Dial180Demonstrator"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
-    xmlns:bd="clr-namespace:Demos.Common.Demonstrators" Height="Auto" Width="Auto">
+    
+    xmlns:bd="clr-namespace:Demos.Common.Demonstrators"
+    xmlns:dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding"
+    Height="Auto" Width="Auto">
 
     <Grid x:Name="LayoutRoot" >
         <Grid.RowDefinitions>
@@ -18,7 +20,7 @@
         <Rectangle RadiusX="10" RadiusY="10" />
         <StackPanel Orientation="Vertical">
 
-            <db:Dial180North  Grid.Row="1" 
+            <dashboarding:Dial180North  Grid.Row="1" 
             FaceTextVisibility="{Binding Path=FaceTextVisibility}"
             FaceTextColor="{Binding Path=FaceTextColor}"                     
             FaceTextFormat="{Binding Path=FaceTextFormat}"                     
@@ -37,9 +39,9 @@
             Value="{Binding CurrentValue, Mode=TwoWay}"
                               >
 
-            </db:Dial180North>
+            </dashboarding:Dial180North>
 
-            <db:Dial180South  Grid.Row="1" Margin="0,4,0,0" 
+            <dashboarding:Dial180South  Grid.Row="1" Margin="0,4,0,0" 
             FaceTextVisibility="{Binding Path=FaceTextVisibility}"
             FaceTextColor="{Binding Path=FaceTextColor}"                     
             FaceTextFormat="{Binding Path=FaceTextFormat}"                     
@@ -58,12 +60,12 @@
             Value="{Binding CurrentValue, Mode=TwoWay}"
                               >
 
-            </db:Dial180South>
+            </dashboarding:Dial180South>
 
 
 
             <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
-                <db:Dial180West  
+                <dashboarding:Dial180West  
             FaceTextVisibility="{Binding Path=FaceTextVisibility}"
             FaceTextColor="{Binding Path=FaceTextColor}"                     
             FaceTextFormat="{Binding Path=FaceTextFormat}"                     
@@ -82,10 +84,10 @@
             Value="{Binding CurrentValue, Mode=TwoWay}"
                 >
 
-                </db:Dial180West>
+                </dashboarding:Dial180West>
 
 
-                <db:Dial180East Margin="4,0,0,0" 
+                <dashboarding:Dial180East Margin="4,0,0,0" 
             FaceTextVisibility="{Binding Path=FaceTextVisibility}"
             FaceTextColor="{Binding Path=FaceTextColor}"                     
             FaceTextFormat="{Binding Path=FaceTextFormat}"                     
@@ -104,7 +106,7 @@
             Value="{Binding CurrentValue, Mode=TwoWay}"
                      >
 
-            </db:Dial180East>
+            </dashboarding:Dial180East>
 
 </StackPanel>
             
@@ -119,3 +121,18 @@
 
     </Grid>
 </UserControl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

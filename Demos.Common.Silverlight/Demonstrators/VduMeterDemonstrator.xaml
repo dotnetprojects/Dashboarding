@@ -1,9 +1,9 @@
 ﻿<UserControl x:Class="Demos.Common.Demonstrators.VduMeterDemonstrator"
    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:db="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding"
+    
     xmlns:bd="clr-namespace:Demos.Common.Demonstrators"
-    >
+    xmlns:dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=DotNetProjects.Dashboarding">
 
     <Grid x:Name="LayoutRoot" >
         <Grid.RowDefinitions>
@@ -21,16 +21,16 @@
 
         <bd:BoundData Grid.ColumnSpan="2" x:Name="_slide"/>
 
-        <db:DecadeVuMeter Width="24" Height="100"  Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial0" Grid.Row="1" >          
-        </db:DecadeVuMeter>
+        <dashboarding:DecadeVuMeter Width="24" Height="100"  Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial0" Grid.Row="1" >          
+        </dashboarding:DecadeVuMeter>
 
         <TextBlock  Grid.Row="1" Grid.Column="1" Foreground="AntiqueWhite">Default appearance</TextBlock>
 
-        <db:DecadeVuMeter Width="24" Height="100" Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial1" Grid.Row="2" 
+        <dashboarding:DecadeVuMeter Width="24" Height="100" Value="{Binding Path=CurrentValue, Mode=TwoWay}" x:Name="_dial1" Grid.Row="2" 
             BorderColor="#FF412B6D" 
             LedOnColor= "#FF614B8D"
             LedOffColor="#FF110B3D">
-        </db:DecadeVuMeter>
+        </dashboarding:DecadeVuMeter>
 
         <TextBlock Grid.Row="2" Grid.Column="1" Foreground="AntiqueWhite">Styled</TextBlock>
 
@@ -40,3 +40,6 @@
         
     </Grid>
 </UserControl>
+
+
+
